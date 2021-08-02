@@ -53,7 +53,7 @@ StringBuffer sb = new StringBuffer(s);
 s = sb.reverse().toString();
 ```
 
-# 3. 리스트 뒤집기
+# 3. 배열 뒤집기
 ### 1) python
 - 슬라이싱 - 값 반환, 공간복잡도 O(n)
 - reverse() - 내부 변경, 공간복잡도 O(1)
