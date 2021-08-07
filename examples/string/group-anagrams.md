@@ -10,6 +10,7 @@
 
 
 # 2. 코드
+### 1) python
 ```python
 import collections
 

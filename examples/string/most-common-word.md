@@ -11,6 +11,7 @@
 
 
 # 2. 코드
+### 1) python
 ```python
 import re
 import collections

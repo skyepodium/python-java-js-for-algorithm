@@ -136,6 +136,8 @@ a = "".join(sorted(a))
 
 ### 2) java
 ```java
+String a = "edcba";
+
 // 1. 문자열을 char array로 변경
 char[] charArray = a.toCharArray();
 
@@ -152,10 +154,10 @@ a = new String(charArray);
 s = "Hello World"
 
 # 소문자
-s.lower()
+s = s.lower()
 
 # 영문자
-s.upper()
+s = s.upper()
 ```
 
 ### 2) java
@@ -163,8 +165,8 @@ s.upper()
 String s = "Hello World";
 
 // 소문자
-s.toLowerCase();
+s = s.toLowerCase();
 
 // 대문자
-s.toUpperCase();
+s = s.toUpperCase();
 ```

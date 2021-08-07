@@ -13,6 +13,7 @@
 
 
 # 2. 코드
+### 1) python
 ```python
 class Solution:
     def reorderLogFiles(self, logs: List[str]) -> List[str]:
