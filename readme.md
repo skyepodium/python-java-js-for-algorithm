@@ -138,8 +138,10 @@ a = "".join(sorted(a))
 ```java
 // 1. 문자열을 char array로 변경
 char[] charArray = a.toCharArray();
+
 // 2. Arrays sort를 사용해서 배열 정렬, 반환값 없음
 Arrays.sort(charArray);
+
 // 3. char array를 String 클래스로 생성
 a = new String(charArray);
 ```
