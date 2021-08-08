@@ -3,7 +3,7 @@
 - 대소문자 구분하지 않는다.
 - 영문자와 숫자를 대상으로 한다.
 
-문자열의 길이 1 <= n <= 20만
+- 문자열의 길이 1 <= n <= 20만
 
 
 [문제 링크](https://leetcode.com/problems/valid-palindrome/)

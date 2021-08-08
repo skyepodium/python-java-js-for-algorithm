@@ -4,7 +4,7 @@
 - 금지된 단어는 제외한다.
 - 가장 많이 언급된 단어를 반환하세요.
 
-문자열의 길이 1 <= n <= 1000
+- 문자열의 길이 1 <= n <= 1000
 
 
 [문제 링크](https://leetcode.com/problems/most-common-word/)

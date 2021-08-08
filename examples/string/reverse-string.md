@@ -3,7 +3,7 @@
 - 배열을 뒤집어라
 - 공간 복잡도 O(1)
 
-문자열의 길이 1 <= n <= 10만
+- 문자열의 길이 1 <= n <= 10만
 
 
 [문제 링크](https://leetcode.com/problems/reverse-string/)
