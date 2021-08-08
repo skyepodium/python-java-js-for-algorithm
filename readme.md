@@ -237,6 +237,7 @@ infoList.add(new Info("b", 7));
 infoList.add(new Info("b", 8));
 
 Collections.sort(infoList, (a, b) -> {
+    // 문자가 같은 경우
     if(a.getName().compareTo(b.getName()) == 0) {
         // 숫자 내림차순 정렬
         return -(a.getAge() - b.getAge());
