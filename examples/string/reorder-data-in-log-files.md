@@ -38,4 +38,47 @@ class Solution:
 
 ### 2) java
 ```java
+class Solution {
+    public String[] reorderLogFiles(String[] logs) {
+
+        ArrayList<String> letters = new ArrayList<>();
+        ArrayList<String> digits = new ArrayList<>();
+
+        for(String log: logs) {
+            String[] splitLog = log.split(" ");
+
+            // 1. identifier를 제외한 content가 숫자인 경우
+            if(isDigit(splitLog[1])) digits.add(log);
+
+            // 2. content가 문자인 경우
+            else letters.add(log);
+        }
+
+        // 3. letters 사전 순 정렬, 만약 같으면 identifier 사전 순 정렬
+        Collections.sort(letters, (a, b) -> {
+            String first = a.split(" ", 2)[1];
+            String second = b.split(" ", 2)[1];
+
+            if(first.equals(second)) {
+                return a.split(" ")[0].compareTo(b.split(" ")[0]);
+            }
+            else{
+                return first.compareTo(second);
+            }
+        });
+
+        // 4. 결과 String Array로 반환
+        letters.addAll(digits);
+        String[] result = new String[letters.size()];
+        return letters.toArray(result);
+    }
+
+    public Boolean isDigit(String s) {
+        int size = s.length();
+        for(int i=0; i<size; i++) {
+            if(!Character.isDigit(s.charAt(i))) return false;
+        }
+        return true;
+    }
+}
 ```
