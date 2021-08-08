@@ -16,7 +16,7 @@
 ### 1) python
 ```python
 class Solution:
-    def reorderLogFiles(self, logs: List[str]) -> List[str]:
+    def reorderLogFiles(self, logs: list[str]) -> list[str]:
         
         letters = []
         digits = []
