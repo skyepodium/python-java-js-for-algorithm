@@ -73,7 +73,9 @@ class Solution {
         return letters.toArray(result);
     }
 
+    // 5. 숫자인지 검사
     public Boolean isDigit(String s) {
+        // 숫자는 0으로 시작할 수 있고 길이 제한이 없다.
         int size = s.length();
         for(int i=0; i<size; i++) {
             if(!Character.isDigit(s.charAt(i))) return false;

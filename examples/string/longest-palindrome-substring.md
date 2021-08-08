@@ -42,7 +42,7 @@ class Solution:
 ```
 
 ### 2) java
-```
+```java
 class Solution {
     public String longestPalindrome(String s) {
 

@@ -148,7 +148,46 @@ Arrays.sort(charArray);
 a = new String(charArray);
 ```
 
-# 6. 대문자, 소문자로 변경
+# 6. 문자열이 숫자인지 판별
+### 1) python
+```python
+s = "0123456789"
+
+# isdigit, isnumeric의 차이는
+# 3², ½와 같은 것을 판별하는데 있다.
+# 알고리즘에서는 만날일이 거의 없기 때문에 패스하자
+
+s.isdigit()
+
+s.isnumeric()
+```
+### 2) java
+Character 클래스의 isDigit 메서드를 사용한다.
+
+Integer.pareseInt 등의 메소드를 try, catch와 함께 사용할 수도 있지만 다음과 같은 이슈가 있다.
+- 0부터 시작하는 경우
+- 숫자 자료형 범위를 넘어가는 경우
+```java
+class Main {
+    public static void main(String[] args) {
+
+        String s = "0123456789";
+
+        isDigit(s);
+    }
+
+    public static Boolean isDigit(String s) {
+        int size = s.length();
+        for(int i=0; i<size; i++) {
+            if(!Character.isDigit(s.charAt(i))) return false;
+        }
+        return true;
+    }
+}
+```
+
+
+# 7. 대문자, 소문자로 변경
 ### 1) python
 ```python
 s = "Hello World"
@@ -169,4 +208,40 @@ s = s.toLowerCase();
 
 // 대문자
 s = s.toUpperCase();
+```
+
+# 8. 객체 리스트 정렬
+### 1) python
+```python
+info_list = [('a', 10), ('b', 7), ('b', 8)]
+
+# 1. 문자 사전순 정렬, 숫자 내림차순 정렬
+info_list.sort(key=lambda x: (x[0], -x[1]))
+```
+
+### 2) java
+#### 문자열의 경우 compareTo를 사용한다.
+- -1 사전순
+- 0 같다
+- 1 사전역순
+
+#### 숫자의 경우 compareTo가 없다.
+- -1 오름차순
+- 0 같다
+- 1 내림차순
+
+```java
+ArrayList<Info> infoList = new ArrayList<>();
+infoList.add(new Info("a", 10));
+infoList.add(new Info("b", 7));
+infoList.add(new Info("b", 8));
+
+Collections.sort(infoList, (a, b) -> {
+    if(a.getName().compareTo(b.getName()) == 0) {
+        // 숫자 내림차순 정렬
+        return -(a.getAge() - b.getAge());
+    }
+    // 문자 사전순 정렬
+    return a.getName().compareTo(b.getName());
+});
 ```
