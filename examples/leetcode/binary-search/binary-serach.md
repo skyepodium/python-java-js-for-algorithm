@@ -10,25 +10,20 @@
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
 
-        # 1. init
-        l = 0
-        r = len(nums) - 1
-
-        # 2. binary search
+        # 1. binary_search
         def binary_search(l, r):
             while l <= r:
-                mid = (l + r) // 2
+                mid = l + (r - l) // 2
 
                 if nums[mid] < target:
-                    l += 1
+                    l = mid + 1
                 elif nums[mid] > target:
-                    r -= 1
+                    r = mid - 1
                 else:
                     return mid
-
             return -1
 
-        return binary_search(l, r)
+        return binary_search(0, len(nums) - 1)
 ```
 
 ### 2) java
@@ -43,13 +38,13 @@ class Solution {
 
     public int binarySearch(int l, int r, int[] nums, int target) {
         while(l <= r) {
-            int mid = (l+r) / 2;
+            int mid = l + (r-l) / 2;
 
             if(nums[mid] < target) {
-                l++;
+                l = mid + 1;
             }
             else if(nums[mid] > target) {
-                r--;
+                r = mid - 1;
             }
             else {
                 return mid;
