@@ -26,25 +26,31 @@ class Solution:
 
 ### 2) java
 ```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
 class Solution {
-    public int maxSubArray(int[] nums) {
-        // 1. init
-        int size = nums.length;
-        int[] d = new int[size];
-        int res = d[0] = nums[0];
-        
-        // 2. tabulation
-        for(int i=1; i<size; i++) {
-            d[i] = max(nums[i], d[i-1] + nums[i]);
-            
-            res = max(res, d[i]);
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        if((l1 == null) || (l2 != null && l1.val > l2.val)) {
+            ListNode temp = null;
+            temp = l1;
+            l1 = l2;
+            l2 = temp;
         }
-        
-        return res;
-    }
-    
-    public int max(int a, int b) {
-        return a > b ? a : b;
+
+        if(l1 != null) {
+            l1.next = this.mergeTwoLists(l1.next, l2);
+        }
+
+        return l1;
     }
 }
 ```
