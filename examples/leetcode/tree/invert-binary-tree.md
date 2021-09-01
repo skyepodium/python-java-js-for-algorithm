@@ -1,5 +1,5 @@
 # 1. 설명
-- 트리의 최대 깊이를 구하세요.
+- 중심을 기준으로 이진 트리를 뒤집으세요.
 
 
 [문제 링크](https://leetcode.com/problems/invert-binary-tree/)
