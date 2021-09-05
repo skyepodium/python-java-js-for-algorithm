@@ -1,6 +1,6 @@
 # 1. 설명
 - 중위 순회(inorder) 결과를 반환하세요.
-- left, mid, right
+- left, root, right
 
 
 [문제 링크](https://leetcode.com/problems/binary-tree-inorder-traversal/)
