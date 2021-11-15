@@ -47,6 +47,7 @@ class Solution:
 ```
 
 ### 2) java
+### loop
 ```java
 class Solution {
     public int search(int[] nums, int target) {
@@ -71,6 +72,32 @@ class Solution {
             }
         }
         return -1;
+    }
+}
+```
+### recursive
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+
+        return binarySearch(0, nums.length - 1, nums, target);
+    }
+
+    public int binarySearch(int s, int e, int[] nums, int target) {
+        // exception
+        if(s > e) return -1;
+
+        int mid = s + (e-s) / 2;
+
+        if(nums[mid] < target) {
+            return binarySearch(mid+1, e, nums, target);
+        }
+        else if(nums[mid] > target) {
+            return binarySearch(s, mid-1, nums, target);
+        }
+        else {
+            return mid;
+        }
     }
 }
 ```
