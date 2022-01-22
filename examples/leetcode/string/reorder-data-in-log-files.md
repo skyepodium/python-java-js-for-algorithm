@@ -41,41 +41,36 @@ class Solution:
 class Solution {
     public String[] reorderLogFiles(String[] logs) {
 
-        ArrayList<String> letters = new ArrayList<>();
-        ArrayList<String> digits = new ArrayList<>();
+        // 1. init
+        List<String> letters = new ArrayList<>();
+        List<String> digits = new ArrayList<>();
 
-        for(String log: logs) {
-            String[] splitLog = log.split(" ");
+        // 2. 숫자 여부에 따라 로그 분리
+        Arrays.stream(logs).forEach(x -> {
+            if(isDigit(x.split(" ")[1])) digits.add(x);
+            else letters.add(x);
+        });
 
-            // 1. identifier를 제외한 content가 숫자인 경우
-            if(isDigit(splitLog[1])) digits.add(log);
+        // 3. letters 정렬 1) 로그 기준, 2) identifier 기준
+        letters.sort((a, b) -> {
+            String[] first = a.split(" ", 2);
+            String[] second = b.split(" ", 2);
 
-            // 2. content가 문자인 경우
-            else letters.add(log);
-        }
-
-        // 3. letters 사전 순 정렬, 만약 같으면 identifier 사전 순 정렬
-        Collections.sort(letters, (a, b) -> {
-            String first = a.split(" ", 2)[1];
-            String second = b.split(" ", 2)[1];
-
-            if(first.equals(second)) {
-                return a.split(" ")[0].compareTo(b.split(" ")[0]);
-            }
-            else{
-                return first.compareTo(second);
+            if (first[1].equals(second[1])) {
+                return first[0].compareTo(second[0]);
+            } else {
+                return first[1].compareTo(second[1]);
             }
         });
 
-        // 4. 결과 String Array로 반환
+        // 4. 리스트 array로 변경
         letters.addAll(digits);
-        String[] result = new String[letters.size()];
-        return letters.toArray(result);
+        String[] res = new String[letters.size()];
+        return letters.toArray(res);
     }
 
-    // 5. 숫자인지 검사
+    // 5. 숫자 여부 검사 - 1) 0으로 시작 가능, 2) 길이 제한 없음
     public Boolean isDigit(String s) {
-        // 숫자는 0으로 시작할 수 있고 길이 제한이 없다.
         int size = s.length();
         for(int i=0; i<size; i++) {
             if(!Character.isDigit(s.charAt(i))) return false;
