@@ -8,6 +8,51 @@
 [문제 링크](https://leetcode.com/problems/two-sum/)
 
 # 2. 코드
+## O(n) - map
+### 1) python
+```python
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        # 1. init
+        d = {}
+
+        # 2. loop
+        for idx, num in enumerate(nums):
+            remain = target - num
+            if remain in d:
+                return [d[remain], idx]
+            else:
+                d[num] = idx
+```
+### 2) java
+````java
+lass Solution {
+    public int[] twoSum(int[] nums, int target) {
+        // 1. init
+        int[] res = new int[2];
+        Map<Integer, Integer> m = new HashMap<>();
+
+        // 2. loop
+        for(int i=0; i<nums.length; i++) {
+            int cur = nums[i];
+            int remain = target - cur;
+            if(m.containsKey(remain)) {
+                int idx = m.get(remain);
+                res[0] = idx;
+                res[1] = i;
+                break;
+            }
+            else {
+                m.put(cur, i);
+            }
+        }
+
+        return res;
+    }
+}
+````
+
+## O(nlogn) - 정렬
 ### 1) python
 ```python
 class Solution:
@@ -40,44 +85,31 @@ class Solution:
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-
-        // 1. 인덱스와 값을 저장할 ArrayList 생성
-        ArrayList<Info> numList = new ArrayList<>();
-
-        // 2. 인덱스와 값 저장
-        for(int i=0; i< nums.length; i++) {
-            numList.add(new Info(i, nums[i]));
+        // 1. init
+        int[] res = new int[2];
+        List<Info> numList = new ArrayList<>();
+        for(int i=0; i<nums.length; i++) {
+            numList.add(new Info(nums[i], i));
         }
 
-        // 3. 값 기준 오름차순 정렬
-        Collections.sort(numList, (a, b) -> {
-            return a.getNum() - b.getNum();
-        });
+        // 2. sort
+        numList.sort(Comparator.comparingInt(a -> a.num));
 
-        int[] res = new int[2];
-
+        // 3. two pointer
         int l = 0;
-        int r = numList.size() - 1;
-
-        // 4. 투포인터 사용
+        int r = nums.length - 1;
         while(l < r) {
-            Info lInfo = numList.get(l);
-            Info rInfo = numList.get(r);
+            int cur = numList.get(l).num + numList.get(r).num;
 
-            int sumVal = lInfo.getNum() + rInfo.getNum();
-
-            // 1) 합이 target보다 크면 오른쪽 포인터 왼쪽으로
-            if(sumVal > target) {
-                r--;
-            }
-            // 2) 합이 target보다 작으면 왼쪽 포인터 오른쪽으로
-            else if(sumVal < target) {
+            if(cur < target) {
                 l++;
             }
-            // 3) 합이 target과 같으면 인덱스 반환
+            else if(cur > target) {
+                r--;
+            }
             else {
-                res[0] = lInfo.getIdx();
-                res[1] = rInfo.getIdx();
+                res[0] = numList.get(l).idx;
+                res[1] = numList.get(r).idx;
                 break;
             }
         }
@@ -87,21 +119,12 @@ class Solution {
 }
 
 class Info {
+    int num;
+    int idx;
 
-    private int idx;
-    private int num;
-
-    public Info(int idx, int num) {
-        this.idx = idx;
+    public Info(int num, int idx) {
         this.num = num;
-    }
-
-    public int getIdx() {
-        return this.idx;
-    }
-
-    public int getNum() {
-        return this.num;
+        this.idx = idx;
     }
 }
 ```
