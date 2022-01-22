@@ -12,11 +12,17 @@
 # 2. 코드
 ### 1) python
 ```python
+'''
+시간 복잡도: O(N)
+공간 복잡도: O(1)
+사용한 알고리즘: 정규 표현식, 슬라이싱
+사용한 자료구조: -
+'''
 import re
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        # 1. 정규표현식으로 영문자, 숫자이외의 문자 제거, 
+        # 1. 정규표현식으로 영문자, 숫자이외의 문자 제거
         # 2. 모두 소문자로 변환
         s = re.sub('[^a-z0-9]', '', s.lower())
         
@@ -25,22 +31,32 @@ class Solution:
 ```
 
 ### 2) java
-문자열의 길이가 20만이고 O(n)으로 비교해도 된다고 생각했기 때문에 StringBuffer 클래스 사용
-
-속도가 중요하다면 투포인터 사용
+정규 표현식, 투포인터 사용
 ```java
+/*
+    시간 복잡도: O(N) - N 문자열의 길이, 소문자 변환을 위해 문자열 전체 순회
+    공간 복잡도: O(1) - 새로운 자료구조 사용 X
+    사용한 알고리즘: 정규표현식, 투 포인터
+    사용한 자료구조: -
+ */
+
 class Solution {
     public boolean isPalindrome(String s) {
-        // 1. 정규표현식으로 영문자, 숫자이외의 문자 제거, 
-        // 2. 모두 소문자로 변환
-        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        
-        // 3. StringBuffer 클래스를 사용해서 문자열 뒤집기
-        StringBuffer sb = new StringBuffer(s);
-        String reversed = sb.reverse().toString();
-        
-        // 4. 두 문자열의 값이 같은지 equals로 확인
-        return s.equals(reversed);
+        // 1. 정규 표현식
+        // 소문자 변환, 소문자-숫자 이외 모두 제거
+        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+
+        // 2. 투포인터
+        // 최대 문자열 길이의 절반만큼 반복
+        int l = 0;
+        int r = s.length() - 1;
+        while(l < r) {
+            if(s.charAt(l) != s.charAt(r)) return false;
+            l++;
+            r--;
+        }
+
+        return true;
     }
 }
 ```
