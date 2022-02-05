@@ -10,7 +10,7 @@
 그냥 정리해보려구
 
 # 문제풀이
-[리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)
+[리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)           
 [프로그래머스](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/programmers)
 
 # 문법
