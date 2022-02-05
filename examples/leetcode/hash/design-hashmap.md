@@ -8,10 +8,10 @@
 1. separate chaining(자바, C++, go)
 2. open address(파이썬, 루비)
 
-저는 자바, 파이썬 모두 개별 체이닝 방식을 사용했습니다. (배열 + 링크드리스트)
 
 # 2. 코드
 ### 1) python
+#### Seperate Chaining
 ```python
 class MyHashMap:
     def __init__(self):
@@ -87,6 +87,7 @@ class ListNode:
 ```
 
 ### 2) java
+#### Seperate Chaining
 ```java
 class MyHashMap {
 
