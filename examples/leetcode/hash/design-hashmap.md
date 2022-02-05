@@ -5,10 +5,10 @@
 [문제 링크](https://leetcode.com/problems/design-hashmap)
 
 해시맵을 만드는 2가지 방법
-1. chaining(자바)- 배열 + 링크드 리스트로 설계
-2. open address(파이썬) 배열
+1. separate chaining(자바, C++, go)
+2. open address(파이썬, 루비)
 
-저는 자바, 파이썬 모두 체이닝 방식을 사용했습니다.
+저는 자바, 파이썬 모두 개별 체이닝 방식을 사용했습니다.
 
 # 2. 코드
 ### 1) python
