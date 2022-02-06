@@ -1,4 +1,4 @@
-# 요즘은...
+# algorithm-for-python-java
 요즘은 코딩테스트를 보면, 언어에 제한을 두는 경우가 있습니다.
 
 - Front - JavaScript
