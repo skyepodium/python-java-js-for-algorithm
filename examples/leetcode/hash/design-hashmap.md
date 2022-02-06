@@ -28,6 +28,7 @@ class MyHashMap:
         self.table = [None] * self.size
         self.count = 0
         for key, value in prev_element:
+            # 해시키가 변경되었기 때문에 put 함수로 값을 넣는다.
             self.put(key, value)
 
     def all_element(self):
