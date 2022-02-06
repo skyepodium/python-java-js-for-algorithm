@@ -19,7 +19,7 @@
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
 
 # 2. 자료구조
-[해시맵](https://github.com/skyepodium/algorithm-for-python-java/tree/master/summary/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)
+[해시맵](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%ED%95%B4%EC%8B%9C%EB%A7%B5.md)
 # 1. 정규 표현식
 ### 1) python
 
