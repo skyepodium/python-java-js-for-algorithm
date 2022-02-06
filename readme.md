@@ -1,4 +1,7 @@
 # 알고리즘을 위한 파이썬, 자바 😃
+![cover](./image/banner.png)    
+
+
 요즘은 코딩테스트를 보면, 언어에 제한을 두는 경우가 있습니다.
 
 - Front - JavaScript
@@ -18,7 +21,7 @@
           
 
 
-          
+
 # 📕 요약
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
