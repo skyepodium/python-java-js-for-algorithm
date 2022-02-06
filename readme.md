@@ -16,8 +16,10 @@ python, Java로 문제 풀면서 정리해봅시다.
 [프로그래머스](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/programmers)
 
 # 정리
+# 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
 
+# 2. 자료구조
 
 # 1. 정규 표현식
 ### 1) python

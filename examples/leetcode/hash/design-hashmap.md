@@ -17,66 +17,94 @@ class MyHashMap:
     def __init__(self):
         self.size = 1000
         self.table = [None] * self.size
+        self.load_factor = 0.6
+        self.count = 0
 
-    def get_idx(self, key):
+    def resize(self):
+        # 기존 요소 모두 탐색
+        prev_element = self.all_element()
+        # 테이블 크기 * 2
+        self.size *= 2
+        self.table = [None] * self.size
+        self.count = 0
+        for key, value in prev_element:
+            self.put(key, value)
+
+    def all_element(self):
+        res = []
+        for node in self.table:
+            while node:
+                res.append((node.key, node.value))
+                node = node.next
+        return res
+
+    def hash_code(self, key):
         return key % self.size
 
     def put(self, key: int, value: int) -> None:
-        idx = self.get_idx(key)
+        h = self.hash_code(key)
 
-        node = self.table[idx]
-        # 1) not exist
-        if not node: self.table[idx] = ListNode(key, value)
-
-        # 2) exist
+        node = self.table[h]
+        # 1) 노드가 비어있는 경우
+        if not node:
+            self.count += 1
+            self.table[h] = ListNode(key, value)
+        # 2) 노드에 값이 들어있는 경우
         else:
             prev = None
-
             while node:
-                # duplicated key
+                # 노드를 찾은 경우 - value 업데이트
                 if node.key == key:
                     node.value = value
                     break
-                # search
+                # 다음 노드로 진행
                 prev, node = node, node.next
-            # not found
-            if not node: prev.next = ListNode(key, value)
+            # 노드를 찾지 못한 경우 - 맨 뒤에 새로우 노드 추가
+            if not node:
+                self.count += 1
+                prev.next = ListNode(key, value)
+
+        if self.count / self.size >= self.load_factor:
+            self.resize()
 
     def get(self, key: int) -> int:
-        idx = self.get_idx(key)
+        h = self.hash_code(key)
 
-        node = self.table[idx]
+        node = self.table[h]
         res = -1
 
         while node:
+            # 노드를 찾은 경우 - value 반환
             if node.key == key:
                 res = node.value
                 break
-
+            # 다음 노드 탐색
             node = node.next
-
         return res
 
     def remove(self, key: int) -> None:
-        idx = self.get_idx(key)
+        h = self.hash_code(key)
 
-        prev, node = None, self.table[idx]
+        prev, node = None, self.table[h]
 
         while node:
             if node.key == key:
+                self.count -= 1
+                # 1) 제일 첫번재 노드 삭제
                 if not prev:
-                    self.table[idx] = node.next
-                    return
+                    self.table[h] = node.next
+                    break
+                # 2) 제일 마지막 노드 삭제
                 elif not node.next:
                     prev.next = None
-                    return
+                    break
+                # 3) 가운데 노드 삭제
                 else:
                     prev.next = node.next
-                    return
-
+                    break
+            # 다음 노드 탐색
             prev, node = node, node.next
-
-        return None
+        return
 
 
 class ListNode:
@@ -89,27 +117,53 @@ class ListNode:
 ### 2) java
 #### Seperate Chaining
 ```java
+import java.util.ArrayList;
+import java.util.List;
+
 class MyHashMap {
 
     private int size;
     private Node[] table;
+    private final float loadFactor = (float) 0.6;
+    private int count;
 
     public MyHashMap() {
         this.size = 1000;
-        table = new Node[1000];
+        table = new Node[this.size];
+        this.count = 0;
     }
 
-    public int getIdx(int key) {
+    public void resize() {
+        List<Node> prevElements = this.getAllElements();
+        this.size *= 2;
+        this.table = new Node[this.size];
+        this.count = 0;
+        prevElements.forEach(x -> this.put(x.key, x.value));
+    }
+
+    public List<Node> getAllElements() {
+        List<Node> res = new ArrayList<>();
+        for(Node node: this.table) {
+            while(node != null) {
+                res.add(new Node(node.key, node.value));
+                node = node.next;
+            }
+        }
+        return res;
+    }
+
+    public int hashCode(int key) {
         return key % this.size;
     }
 
     public void put(int key, int value) {
-        int idx = getIdx(key);
+        int h = hashCode(key);
 
-        Node node = this.table[idx];
+        Node node = this.table[h];
 
         if (node == null) {
-            this.table[idx] = new Node(key, value);
+            this.count += 1;
+            this.table[h] = new Node(key, value);
         } else {
             Node prev = null;
 
@@ -123,14 +177,20 @@ class MyHashMap {
                 node = node.next;
             }
 
-            if(node == null) prev.next = new Node(key, value);
+            if(node == null) {
+                this.count += 1;
+                prev.next = new Node(key, value);
+            }
+        }
+        if((float)(this.count / this.size) >= this.loadFactor) {
+            this.resize();
         }
     }
 
     public int get(int key) {
-        int idx = getIdx(key);
+        int h = hashCode(key);
         int res = -1;
-        Node node = this.table[idx];
+        Node node = this.table[h];
 
         while(node != null) {
             if(node.key == key) {
@@ -145,14 +205,15 @@ class MyHashMap {
     }
 
     public void remove(int key) {
-        int idx = getIdx(key);
-        Node node = this.table[idx];
+        int h = hashCode(key);
+        Node node = this.table[h];
         Node prev = null;
 
         while(node != null) {
             if(node.key == key) {
+                this.count -= 1;
                 if(prev == null) {
-                    this.table[idx] = node.next;
+                    this.table[h] = node.next;
                 } else if(node.next == null) {
                     prev.next = null;
                 } else {
@@ -174,63 +235,6 @@ class Node {
     public Node(int key, int value) {
         this.key = key;
         this.value = value;
-    }
-}
-```# 1. 설명
-- 문자열 S의 부분 문자열중 중복이 없는 경우의 최대길이를 반환하세요.
-
-
-[문제 링크](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-
-# 2. 코드
-### 1) python
-```python
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        # 1. init
-        d = {}
-        l = 0
-        res = 0
-
-        # 2. loop
-        for r, cur in enumerate(s):
-            # 1) dup check
-            if cur in d:
-                l = max(l, d[cur] + 1)
-
-            # 2) insert
-            d[cur] = r
-
-            # 3) update
-            res = max(res, r-l+1)
-
-        return res
-```
-
-### 2) java
-```java
-class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        // 1. init
-        Map<Character, Integer> m = new HashMap<>();
-        int n = s.length();
-        int res = 0;
-        int l = 0;
-
-        // 2. loop
-        for(int r=0; r<n; r++) {
-            char c = s.charAt(r);
-
-            if(m.containsKey(c)) {
-                l = Math.max(l, m.get(c) + 1);
-            }
-
-            m.put(c, r);
-
-            res = Math.max(res, r - l + 1);
-        }
-
-        return res;
     }
 }
 ```
