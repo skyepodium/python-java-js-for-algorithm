@@ -8,10 +8,15 @@
 python, Java로 문제 풀면서 정리해봅시다.
 
 # 문제풀이
-[리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)           
+파이썬, 자바 2개의 언어로 풀었습니다.
+
+리트코드의 경우 [파이썬 알고리즘 인터뷰](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791189909178&orderClick=LEa&Kc=)에 소개된 문제를 위주로 진행했습니다.
+
+[리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)     
 [프로그래머스](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/programmers)
 
-# 문법
+# 정리
+[정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
 
 
 # 1. 정규 표현식
