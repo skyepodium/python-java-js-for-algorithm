@@ -5,7 +5,7 @@
 - Machine Learning - python
 - Server - Java, Python
 
-python, Java로 문제 풀면서 정리해봅시다.
+`python, Java`로 문제 풀면서 정리해봅시다.
 
 # 문제풀이
 파이썬, 자바 2개의 언어로 풀었습니다.
@@ -15,7 +15,6 @@ python, Java로 문제 풀면서 정리해봅시다.
 [리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)     
 [프로그래머스](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/programmers)
 
-# 정리
 # 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
 
