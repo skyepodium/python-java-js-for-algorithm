@@ -5,18 +5,14 @@
 - Machine Learning - python
 - Server - Java, Python
 
-뭔가,Server 엔지니어는 2개의 언어를 사용하다보면, 조금 헷갈릴 때가 있어서 
-
-그냥 정리해보려구
+python, Java로 문제 풀면서 정리해봅시다.
 
 # 문제풀이
 [리트코드](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/leetcode)           
 [프로그래머스](https://github.com/skyepodium/algorithm-for-python-java/tree/master/examples/programmers)
 
 # 문법
-python, java를 같이 쓰다보니 햇갈리기 시작했다.
 
-정리해보자
 
 # 1. 정규 표현식
 ### 1) python
@@ -212,41 +208,4 @@ s = s.toLowerCase();
 
 // 대문자
 s = s.toUpperCase();
-```
-
-# 8. 객체 리스트 정렬
-### 1) python
-```python
-info_list = [('a', 10), ('b', 7), ('b', 8)]
-
-# 1. 문자 사전순 정렬, 숫자 내림차순 정렬
-info_list.sort(key=lambda x: (x[0], -x[1]))
-```
-
-### 2) java
-#### 문자열의 경우 compareTo를 사용한다.
-- -1 사전순
-- 0 같다
-- 1 사전역순
-
-#### 숫자의 경우 compareTo가 없다.
-- -1 오름차순
-- 0 같다
-- 1 내림차순
-
-```java
-ArrayList<Info> infoList = new ArrayList<>();
-infoList.add(new Info("a", 10));
-infoList.add(new Info("b", 7));
-infoList.add(new Info("b", 8));
-
-Collections.sort(infoList, (a, b) -> {
-    // 문자가 같은 경우
-    if(a.getName().compareTo(b.getName()) == 0) {
-        // 숫자 내림차순 정렬
-        return -(a.getAge() - b.getAge());
-    }
-    // 문자 사전순 정렬
-    return a.getName().compareTo(b.getName());
-});
 ```
