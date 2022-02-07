@@ -1,5 +1,5 @@
 # 알고리즘을 위한 파이썬, 자바 😃
-![cover](./image/banner.png)    
+![cover](./image/main.png)    
 
 
 요즘은 코딩테스트를 보면, 언어에 제한을 두는 경우가 있습니다.
