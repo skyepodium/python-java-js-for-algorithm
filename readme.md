@@ -38,6 +38,6 @@
 [대문자, 소문자로 변경](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%8C%80%EB%AC%B8%EC%9E%90%2C%20%EC%86%8C%EB%AC%B8%EC%9E%90%EB%A1%9C%20%EB%B3%80%EA%B2%BD.md)
 ## 4. 배열
 [배열 뒤집기](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EB%B0%B0%EC%97%B4/%EB%B0%B0%EC%97%B4%20%EB%92%A4%EC%A7%91%EA%B8%B0.md)     
-
+[짧은 배열 반환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/summary/%EB%B0%B0%EC%97%B4/%EC%A7%A7%EC%9D%80%20%EB%B0%B0%EC%97%B4%20%EB%B0%98%ED%99%98.md)
 
 
