@@ -23,27 +23,28 @@
 # 🧬 알고리즘
 ## 1. 그래프
 ### 1) 최단경로
--   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/shortest-path/dijkstra.md)
+-   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/dijkstra.md)
     - [백준 1753 : 최단경로](https://www.acmicpc.net/problem/1753)
 
 ### 2) 완전탐색
--   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/brute-force/dfs-bfs.md)
+-   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/brute-force/dfs-bfs.md)
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
 
 ### 3) 최소 스패닝 트리
--   [크루스칼](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/mst/kruskal.md)
+-   [크루스칼](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/mst/kruskal.md)
     - [백준 1197 : 최소 스패닝 트리](https://www.acmicpc.net/problem/1197)
 
 ## 2. 링크드 리스트
 ### 1) 러너
--   [러너](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/linked-list/runner.md)
+-   [러너](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/linked-list/runner.md)
     -   [leetcode: linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 ### 2) 링크드 리스트 뒤집기
 
 # 🎃 자료구조
 ## 1. 해시맵
-- [해시맵](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%ED%95%B4%EC%8B%9C%EB%A7%B5.md)
+- [Seperate Chaining](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/seperate-chaining.md)
+- [Open Adress](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/open-address.md)
     -   [leetcode: design-hashmap](https://leetcode.com/problems/design-hashmap/)
 
 # 📕 요약
