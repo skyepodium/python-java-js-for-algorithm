@@ -27,7 +27,7 @@
     - [백준 1753 : 최단경로](https://www.acmicpc.net/problem/1753)
 
 ### 2) 완전탐색
--   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dijkstra.md)
+-   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dfs-bfs.md)
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
 
 # 📕 요약
