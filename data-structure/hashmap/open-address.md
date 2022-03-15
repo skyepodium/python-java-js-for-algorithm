@@ -9,7 +9,7 @@
 
 2개 모두 구현해봅시다.
 
-[leetcode - design-hashmap](https://leetcode.com/problems/design-hashmap/) - Open Addressing
+[leetcode - design-hashmap](https://leetcode.com/problems/design-hashmap/) - Open Address
 
 # 1.  python
 ```python

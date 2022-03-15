@@ -40,6 +40,8 @@
     -   [leetcode: linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 ### 2) 링크드 리스트 뒤집기
+-   [링크드 리스트 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/linked-list/reverse.md)
+    -   [leetcode: linked-list-cycle](https://leetcode.com/problems/reverse-linked-list/)
 
 # 🎃 자료구조
 ## 1. 해시맵
@@ -47,7 +49,7 @@
 - [Open Adress](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/open-address.md)
     -   [leetcode: design-hashmap](https://leetcode.com/problems/design-hashmap/)
 
-# 📕 요약
+# 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
 
