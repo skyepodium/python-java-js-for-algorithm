@@ -23,12 +23,16 @@
 # 🧬 구현
 ## 1. 그래프
 ### 1) 최단경로
--   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dijkstra.md)
+-   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/shortest-path/dijkstra.md)
     - [백준 1753 : 최단경로](https://www.acmicpc.net/problem/1753)
 
 ### 2) 완전탐색
--   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dfs-bfs.md)
+-   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/brute-force/dfs-bfs.md)
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
+
+### 3) 최소 스패닝 트리
+-   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/mst/kruskal.md)
+    - [백준 1197 : 최소 스패닝 트리](https://www.acmicpc.net/problem/1197)
 
 ## 2. 링크드 리스트
 -   [러너](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/linked-list/runner.md)
