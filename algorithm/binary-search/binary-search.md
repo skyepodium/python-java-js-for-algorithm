@@ -1,4 +1,4 @@
-[leetcode - binary-search](https://leetcode.com/problems/binary-search/)) - binary-search
+[leetcode - binary-search](https://leetcode.com/problems/binary-search/) - 이진탐색
 
 # 이진 탐색 버그
 바이너리 서치에서 mid 인덱스를 계산할 때 버그가 발생할 수 있습니다.
