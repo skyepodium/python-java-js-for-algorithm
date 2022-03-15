@@ -1,4 +1,4 @@
-백준 1753 최단경로 - 다익스트라
+[백준 1753 최단경로](https://www.acmicpc.net/problem/1753) - 다익스트라
 
 # 1. python
 ```python
