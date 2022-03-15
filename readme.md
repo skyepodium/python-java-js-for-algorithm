@@ -23,7 +23,7 @@
 # 🧬 구현
 ## 1. 그래프
 ### 1) 최단경로
--   다익스트라
+-   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dijkstra.md)
     - [백준 1753 : 최단경로](https://www.acmicpc.net/problem/1753)
 
 # 📕 요약
