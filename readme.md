@@ -43,6 +43,12 @@
 -   [링크드 리스트 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/linked-list/reverse.md)
     -   [leetcode: linked-list-cycle](https://leetcode.com/problems/reverse-linked-list/)
 
+# 3. 이진탐색
+### 1) 바이너리 서치
+-   [바이너리 서치](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
+    -   [leetcode: binary-search](https://leetcode.com/problems/binary-search/)
+
+
 # 🎃 자료구조
 ## 1. 해시맵
 - [Seperate Chaining](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/seperate-chaining.md)
