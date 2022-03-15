@@ -66,3 +66,6 @@
 
 ## 4. 팁
 [홀수 짝수 판별 빠르게](https://github.com/skyepodium/python-java-for-algorithm/blob/master/summary/%ED%8C%81/%ED%99%80%EC%88%98%20%EC%A7%9D%EC%88%98%20%ED%8C%90%EB%B3%84.md)
+
+## 5. 3max
+[3max](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/3max.md)
