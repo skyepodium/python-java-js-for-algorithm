@@ -30,6 +30,10 @@
 -   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/dfs-bfs.md)
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
 
+## 2. 링크드 리스트
+-   [러너]()
+    -   [leetcode: linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)
+
 # 📕 요약
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EC%A0%95%EB%A0%AC/%EC%A0%95%EB%A0%AC%20-%20%EB%82%B4%EC%9E%A5%ED%95%A8%EC%88%98.md)
