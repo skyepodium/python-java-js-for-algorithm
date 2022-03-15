@@ -31,7 +31,7 @@
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
 
 ## 2. 링크드 리스트
--   [러너]()
+-   [러너](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/linked-list/runner.md)
     -   [leetcode: linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 # 📕 요약
