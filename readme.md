@@ -31,7 +31,7 @@
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
 
 ### 3) 최소 스패닝 트리
--   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/mst/kruskal.md)
+-   [크루스칼](https://github.com/skyepodium/python-java-for-algorithm/blob/master/implements/graph/mst/kruskal.md)
     - [백준 1197 : 최소 스패닝 트리](https://www.acmicpc.net/problem/1197)
 
 ## 2. 링크드 리스트
