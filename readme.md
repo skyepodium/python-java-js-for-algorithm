@@ -50,9 +50,12 @@
 
 # 4. 수학
 ### 1) GCD, LCM
--   [GCD](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
+-   [GCD](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/math/gcd.md)
     -   [백준 2609: 최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609)
-    
+
+### 2) 에라토스테네스의 체 - 소수판별    
+-   [eratos](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/math/eratos.md)
+    -   [백준 2960: 에라토스테네스의 체](https://www.acmicpc.net/problem/2960)
 
 # 🎃 자료구조
 ## 1. 해시맵
