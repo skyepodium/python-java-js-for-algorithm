@@ -26,6 +26,9 @@
 -   [다익스트라](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/dijkstra.md)
     - [백준 1753 : 최단경로](https://www.acmicpc.net/problem/1753)
 
+-   [플로이드](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/floyd.md)
+    - [백준 11404 : 플로이드](https://www.acmicpc.net/problem/11404)    
+
 ### 2) 완전탐색
 -   [DFS, BFS](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/brute-force/dfs-bfs.md)
     - [백준 1260 : DFS와 BFS](https://www.acmicpc.net/problem/1260)
