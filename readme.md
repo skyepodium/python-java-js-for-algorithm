@@ -48,6 +48,11 @@
 -   [바이너리 서치](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
     -   [leetcode: binary-search](https://leetcode.com/problems/binary-search/)
 
+# 4. 수학
+### 1) GCD, LCM
+-   [GCD](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
+    -   [백준 2609: 최대공약수와 최소공배수](https://www.acmicpc.net/problem/2609)
+    
 
 # 🎃 자료구조
 ## 1. 해시맵
