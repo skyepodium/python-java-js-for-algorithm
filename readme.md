@@ -57,6 +57,10 @@
 -   [eratos](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/math/eratos.md)
     -   [백준 1929: 소수 구하기](https://www.acmicpc.net/problem/1929)
 
+# 5. DAG 사이클이 없는 단방향 그래프
+-   [위상정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/dag/topological-sort.md)
+    -   [백준 2252: 줄 세우기](https://www.acmicpc.net/problem/2252)
+
 # 🎃 자료구조
 ## 1. 해시맵
 - [Seperate Chaining](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/seperate-chaining.md)
