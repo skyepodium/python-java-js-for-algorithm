@@ -102,3 +102,6 @@
 
 ## 5. 3max
 [3max](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/3max.md)
+
+## 6. 파이썬 리스트 출력
+[python list print](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python-list-print.md)
