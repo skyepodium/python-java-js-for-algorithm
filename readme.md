@@ -55,6 +55,11 @@
 -   [바이너리 서치](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
     -   [leetcode: binary-search](https://leetcode.com/problems/binary-search/)
 
+### 2) lowerbound, upperbound
+-   [lowerbound, upperbound](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
+    -   [leetcode: 숫자 카드 2](https://www.acmicpc.net/problem/10816)
+
+
 # 4. 수학
 ### 1) GCD, LCM
 -   [GCD](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/math/gcd.md)
