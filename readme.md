@@ -55,7 +55,7 @@
 
 ### 2) 에라토스테네스의 체 - 소수판별    
 -   [eratos](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/math/eratos.md)
-    -   [백준 2960: 에라토스테네스의 체](https://www.acmicpc.net/problem/2960)
+    -   [백준 1929: 소수 구하기](https://www.acmicpc.net/problem/1929)
 
 # 🎃 자료구조
 ## 1. 해시맵
