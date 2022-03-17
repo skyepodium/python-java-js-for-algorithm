@@ -25,3 +25,15 @@ class Main {
     }
 }
 ```
+
+# 3. javascript
+JS도 Math.max 내장 함수 잘 사용하면 됩니다.
+```js
+const a = 0
+const b = 1
+const c = 3
+
+const res = Math.max(a, b, c)
+
+console.log('res', res)
+```
