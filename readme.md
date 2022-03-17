@@ -105,3 +105,9 @@
 
 ## 6. 파이썬 리스트 출력
 [python list print](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python-list-print.md)
+
+## 7. 2차원 배열 생성
+[2차원 배열](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/2d.md)
+
+## 8. 인접리스트
+[인접 리스트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
