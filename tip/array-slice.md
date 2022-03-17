@@ -19,4 +19,12 @@ class Main {
         String[] b = Arrays.copyOfRange(a, 0, 2);
     }
 }
-``
+```
+
+# 3. javascript
+slice 를 사용합니다.
+```js
+const a = ['a', 'b', 'c', 'd']
+
+const b = a.slice(0, 2)
+```
