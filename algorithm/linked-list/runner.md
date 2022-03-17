@@ -46,3 +46,22 @@ public class Solution {
     }
 }
 ```
+
+# 3. javascript
+```js
+const hasCycle = function(head) {
+    // 1. init
+    let fast = head
+    let slow = head
+    
+    // 2. runner
+    while (fast && fast.next) {
+        fast = fast.next.next
+        slow = slow.next
+        
+        if(fast == slow) return true
+    }
+    
+    return false
+};
+```
