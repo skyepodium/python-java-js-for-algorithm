@@ -56,3 +56,30 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+var lengthOfLongestSubstring = function(s) {
+    // 1. init
+    let res = 0
+    let l = 0
+    let maxLength = 0
+    const m = new Map()
+
+    // 2. loop
+    s.split("").forEach((x, r) => {
+        // 1) dup check
+        if(m.has(x)) {
+            l = Math.max(l, m.get(x) + 1)
+        }
+
+        // 2) insert
+        m.set(x, r)
+
+        // 3) update
+        maxLength = Math.max(maxLength, r-l+1)
+    })
+
+    return maxLength
+};
+```
