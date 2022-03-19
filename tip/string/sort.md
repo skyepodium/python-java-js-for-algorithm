@@ -1,5 +1,5 @@
 # 문자열 정렬
-### 1) python
+# 1. python
 
 ```python
 a = "edcba"
@@ -8,7 +8,7 @@ a = "edcba"
 a = "".join(sorted(a))
 ```
 
-### 2) java
+# 2. java
 ```java
 String a = "edcba";
 
@@ -22,7 +22,7 @@ Arrays.sort(charArray);
 a = new String(charArray);
 ```
 
-### 3) JavaScript
+# 3. JavaScript
 ```js
 let a = "edcba"
 

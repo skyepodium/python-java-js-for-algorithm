@@ -1,5 +1,5 @@
 # 대문자, 소문자로 변경
-### 1) python
+# 1. Python
 ```python
 s = "Hello World"
 
@@ -10,7 +10,7 @@ s = s.lower()
 s = s.upper()
 ```
 
-### 2) java
+# 2. Java
 ```java
 String s = "Hello World";
 
@@ -21,7 +21,7 @@ s = s.toLowerCase();
 s = s.toUpperCase();
 ```
 
-### 3) JavaScript
+# 3. JavaScript
 ```js
 let s = "Hello World"
 

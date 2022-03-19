@@ -87,13 +87,13 @@
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
 
 ## 2. 문자열
-[정규 표현식](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/regex.md)         
+[특정 문자열 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/regex.md)         
 
 [문자열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/reverse.md)     
 
 [문자열을 특정 단어 기준으로 분리해서 리스트로 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/split-base.md)     
 
-[문자열 정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/split-base.md)        
+[문자열 정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/sort.md)        
 
 [문자열이 숫자인지 판별](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/digit.md)     
 
