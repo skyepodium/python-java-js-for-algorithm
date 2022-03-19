@@ -45,3 +45,10 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+var reverseString = function(s) {
+    s = s.reverse()
+};
+```

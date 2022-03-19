@@ -79,3 +79,39 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+var reorderLogFiles = function(logs) {
+    // 1. init
+    const letter = []
+    const digit = []
+
+    // 2. loop
+    logs.forEach(log => {
+        if(/[0-9]/.test(log.split(" ")[1])) {
+            digit.push(log)
+        }
+        else {
+            letter.push(log)
+        }
+    })
+
+    // 3. sort
+    letter.sort((a, b) => {
+        const as = a.split(" ")
+        const bs = b.split(" ")
+
+        const ai = as[0]
+        const bi = bs[0]
+
+        const al = as.slice(1).join(" ")
+        const bl = bs.slice(1).join(" ")
+
+        // 문자열 정렬할때 localeCompare을 사용한다.
+        return al === bl ? ai.localeCompare(bi) : al.localeCompare(bl)
+    })
+
+    return letter.concat(digit)
+};
+```
