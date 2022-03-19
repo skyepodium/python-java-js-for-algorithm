@@ -21,22 +21,31 @@ print(s)
 ```java
 class Main {
     public static void main(String[] args) {
-        // 1. init
+        // 0. init
         String name = "rabbit";
         int age = 3;
-        
-        // 2. string
+
+        // 1. string
         String s = "Hi My name is " + name + " and " + age + " age";
         System.out.println(s);
         // Hi My name is rabbit and 3 age
 
-        // 3. StrinBuilder
+        // 2. StrinBuilder
         StringBuilder sb = new StringBuilder("Hi My name is ");
         sb.append(name);
         sb.append(" and ");
         sb.append(age);
         sb.append(" age");
         System.out.println(sb);
+        // Hi My name is rabbit and 3 age
+
+        // 3. StringBuffer
+        StringBuffer sf = new StringBuffer("Hi My name is ");
+        sf.append(name);
+        sf.append(" and ");
+        sf.append(age);
+        sf.append(" age");
+        System.out.println(sf);
         // Hi My name is rabbit and 3 age
     }
 }
