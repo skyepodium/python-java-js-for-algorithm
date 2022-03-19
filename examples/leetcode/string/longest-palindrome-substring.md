@@ -87,3 +87,40 @@ class Solution {
     }
 }
 ```
+
+### JavaScript
+```js
+var longestPalindrome = function(s) {
+    // 0. exception
+    if(s.length < 2 || s === s.split("").reverse().join("")) return s
+
+    // 1. init
+    let result = ""
+
+    // 2. two pointer
+    const expand  = (l, r) => {
+        while(l >= 0 && r <= s.length && s[l] === s[r-1]) {
+            l--
+            r++
+        }
+        return s.slice(l+1, r-1)
+    }
+
+    const maxString = (a, b) => {
+        return a.length < b.length ? b : a
+    }
+
+    const maxString3 = (a, b, c) => {
+        return maxString(a, maxString(b, c))
+    }
+
+    // 3. search
+    s.split("").forEach((_, i) => {
+        result = maxString3(result
+            ,   expand(i, i+1)
+            ,   expand(i, i+2))
+    })
+
+    return result
+};
+```
