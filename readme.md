@@ -101,6 +101,8 @@
 
 [문자열 배열로 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/string-to-array.md)
 
+[문자열 합성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/concat.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 

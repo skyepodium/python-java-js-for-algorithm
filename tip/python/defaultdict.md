@@ -34,9 +34,9 @@ class Node:
         self.next = None
 
     def __repr__(self):
-        return str(self.val) + " " + str(self.next)
+        return f"{self.val} {self.next}"
 
 n = defaultdict(Node)
 n['a'] = Node(3)
-print(n['a']) # 3 None
+print(n['a'])
 ```
