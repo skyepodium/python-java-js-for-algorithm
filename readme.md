@@ -1,5 +1,5 @@
 # 알고리즘을 위한 파이썬, 자바 😃
-![cover](./image/main.png)    
+![cover](./image/banner.png)    
 
 
 요즘은 코딩테스트를 보면, 언어에 제한을 두는 경우가 있습니다.
@@ -94,7 +94,7 @@
 [문자열이 숫자인지 판별](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%B4%20%EC%88%AB%EC%9E%90%EC%9D%B8%EC%A7%80%20%ED%8C%90%EB%B3%84.md)     
 [대문자, 소문자로 변경](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EB%AC%B8%EC%9E%90%EC%97%B4/%EB%8C%80%EB%AC%B8%EC%9E%90%2C%20%EC%86%8C%EB%AC%B8%EC%9E%90%EB%A1%9C%20%EB%B3%80%EA%B2%BD.md)
 
-[문자열 배열로 만들기] ()
+[문자열 배열로 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/string-to-array.md)
 
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/algorithm-for-python-java/blob/master/summary/%EB%B0%B0%EC%97%B4/%EB%B0%B0%EC%97%B4%20%EB%92%A4%EC%A7%91%EA%B8%B0.md)     
