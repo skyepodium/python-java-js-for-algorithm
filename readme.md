@@ -82,6 +82,10 @@
 - [Open Adress](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/open-address.md)
     -   [leetcode: design-hashmap](https://leetcode.com/problems/design-hashmap/)
 
+## 2. 트라이
+- [Trie](https://github.com/skyepodium/python-java-js-for-algorithm/blob/master/examples/leetcode/trie/implement-trie-prefix-tree.md)
+ 
+
 # 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
