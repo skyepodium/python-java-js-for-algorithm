@@ -1,4 +1,4 @@
-배열 자르기
+# 배열 자르기
 
 # 1. python
 슬라이싱을 적극 활용합니다. 슬라이싱이 제일 빠르고 효율적입니다.
@@ -7,6 +7,8 @@
 a = ['a', 'b', 'c', 'd']
 
 b = list(a[:2])
+
+print(b)
 ```
 
 # 2. java
@@ -17,6 +19,8 @@ class Main {
         String[] a = {"a", "b", "c", "d"};
 
         String[] b = Arrays.copyOfRange(a, 0, 2);
+
+        Arrays.stream(b).forEach(System.out::println);
     }
 }
 ```
@@ -27,4 +31,6 @@ slice 를 사용합니다.
 const a = ['a', 'b', 'c', 'd']
 
 const b = a.slice(0, 2)
+
+console.log('b', b)
 ```

@@ -21,3 +21,12 @@ Arrays.sort(charArray);
 // 3. char array를 String 클래스로 생성
 a = new String(charArray);
 ```
+
+### 3) JavaScript
+```js
+let a = "edcba"
+
+a = a.split("").sort().join("")
+
+console.log('a', a)
+```

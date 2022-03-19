@@ -20,3 +20,12 @@ s = s.toLowerCase();
 // 대문자
 s = s.toUpperCase();
 ```
+
+### 3) JavaScript
+```js
+let s = "Hello World"
+
+s = s.toLowerCase()
+
+s = s.toUpperCase()
+```

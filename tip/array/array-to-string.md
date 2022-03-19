@@ -20,3 +20,12 @@ class Main {
     }
 }
 ```
+
+# 3. JavaScript
+```js
+const a = ['a', 'b', 'c', 'd']
+
+const res = a.join("")
+
+console.log('res', res)
+```

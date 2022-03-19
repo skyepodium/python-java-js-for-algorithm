@@ -28,3 +28,10 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const solution = () => {
+    return [0, 1]
+}
+```
