@@ -60,3 +60,17 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+var isPalindrome = function(s) {
+    // 1. 소문자 변경
+    s = s.toLowerCase()
+
+    // 2. replaceAll 메서드, 정규식 치환
+    s = s.replaceAll(/[^a-z0-9]/g, "")
+
+    // 3. 문자열 뒤집기
+    return s === s.split("").reverse().join("")
+};
+```
