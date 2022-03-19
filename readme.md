@@ -1,4 +1,4 @@
-# 알고리즘을 위한 파이썬, 자바 😃
+# 알고리즘을 위한 파이썬, 자바, 자바스크립트 😃
 ![cover](./image/banner.png)    
 
 
@@ -6,9 +6,9 @@
 
 - Front - JavaScript
 - Machine Learning - python
-- **Server - Python, Java**
+- Server - Python, Java
 
-`python, Java` 로 문제 풀면서 정리해봅시다.
+`python, Java, JS` 로 문제 풀면서 정리해봅시다.
 
 # 🧩 문제 풀이
 파이썬, 자바 2개의 언어로 풀었습니다.
@@ -113,4 +113,4 @@
 [2차원 배열](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/2d.md)
 
 ## 8. 인접리스트
-[인접 리스트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
+[인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
