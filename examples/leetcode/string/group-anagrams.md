@@ -12,34 +12,16 @@
 # 2. 코드
 ### 1) python
 ```python
-import collections
-
-
 class Solution:
-    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
-        # 1. 결과를 저장할 인접리스트
-        res_list = []
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # 1. init
+        d = defaultdict(list)
 
-        # 2. 인덱스를 저장할 딕셔너리 
-        d = collections.defaultdict(int)
-        idx = 0
-        
-        for word in strs:
-            # 3. 정렬
-            val = "".join(sorted(word))
-            
-            # 4. 키값이 저장되어 있으면 추가
-            if val in d:
-                cur_idx = d[val]
-                res_list[cur_idx].append(word)
-            # 5. 없으면 새로 생성
-            else:
-                d[val] = idx
-                res_list.append([word])
-                idx += 1
+        # 2. loop
+        for idx, s in enumerate(strs):
+            d["".join(sorted(s))].append(s)
 
-        return res_list
-
+        return d.values()
 ```
 
 ### 2) java
@@ -81,4 +63,22 @@ class Solution {
         return result;
     }
 }
+```
+
+### 3. JavaScript
+```js
+var groupAnagrams = function(strs) {
+    // 1. init
+    const m = new Map()
+
+    // 2. loop
+    strs.forEach(s => {
+        const key = s.split("")
+            .sort((a, b) => a.localeCompare(b))
+            .join("")
+        m.has(key) ? m.set(key, m.get(key).concat([s])) : m.set(key, [s])
+    })
+
+    return [...m.values()]
+};
 ```
