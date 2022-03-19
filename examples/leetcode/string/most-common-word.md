@@ -13,32 +13,13 @@
 # 2. 코드
 ### 1) python
 ```python
-import re
-import collections
-
-
 class Solution:
-    def mostCommonWord(self, paragraph: str, banned: list[str]) -> str:
-        # 1. 정규표현식으로 영문자가 아닌 문자 공백 1칸으로 변경
-        paragraph = re.sub("[^a-zA-Z]", " ", paragraph).lower()
+    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+        s = set(banned)
+        p = re.sub("[^a-zA-Z]", " ", paragraph).lower().split()
+        words = [w for w in p if w not in s]
 
-        # 2. 리스트 컴프리헨션으로 금지되지 않은 단어 저장
-        words = [word for word in paragraph.split() if word not in banned]
-
-        # 3. 단어의 개수 저장할 딕셔너리 생성
-        count = collections.defaultdict(int)
-
-        res = ""
-        cnt = 0
-
-        for word in words:
-            count[word] += 1
-            # 가장 많이 언급된 단어 갱신
-            if count[word] > cnt:
-                cnt = count[word]
-                res = word
-
-        return res
+        return Counter(words).most_common(1)[0][0]
 ```
 
 ### 2) java
@@ -89,4 +70,32 @@ class Solution {
         return result;
     }
 }
+```
+
+### 3) JavaScript
+```js
+var mostCommonWord = function(paragraph, banned) {
+    // 1. init
+    const s = new Set(banned)
+    const p = paragraph.toLowerCase().replaceAll(/[^a-zA-Z ]/g, ' ').split(/[ ]+/)
+    const m = new Map()
+    p.forEach(w => {
+        if(!s.has(w)) {
+            if(m.has(w)) m.set(w, m.get(w) + 1)
+            else m.set(w, 0)
+        }
+    })
+
+    // 2. loop
+    let cnt = -1
+    let res = ""
+    for(const [w, c] of m.entries()) {
+        if(c > cnt) {
+            cnt = c
+            res = w
+        }
+    }
+
+    return res
+};
 ```
