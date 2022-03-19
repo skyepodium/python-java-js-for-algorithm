@@ -83,8 +83,8 @@
     -   [leetcode: design-hashmap](https://leetcode.com/problems/design-hashmap/)
 
 ## 2. 트라이
-- [Trie](https://github.com/skyepodium/python-java-js-for-algorithm/blob/master/examples/leetcode/trie/implement-trie-prefix-tree.md)
- 
+- [prefix-tree](https://github.com/skyepodium/python-java-js-for-algorithm/blob/master/examples/leetcode/trie/implement-trie-prefix-tree.md)
+    - [implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
 # 📕 팁
 ## 1. 내장함수
@@ -110,7 +110,7 @@
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 
-[짧은 배열 반환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/short-return.md))
+[짧은 배열 반환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/short-return.md)
 
 [2차원 배열 생성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/2d.md)
 
