@@ -120,6 +120,8 @@
 
 [배열 문자열로 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/array-to-string.md)
 
+[함수형 프로그래밍은 도중에 중단할 수 없습니다.](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/functional.md)
+
 ## 4. 수학
 [3개의 숫자중에서 최대값 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/math/3max.md)
 
