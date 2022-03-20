@@ -80,11 +80,11 @@
 ## 1. 해시맵
 - [Seperate Chaining](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/seperate-chaining.md)
 - [Open Adress](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/hashmap/open-address.md)
-    -   [leetcode: design-hashmap](https://leetcode.com/problems/design-hashmap/)
+    -   [leetcode - design-hashmap](https://leetcode.com/problems/design-hashmap/)
 
 ## 2. 트라이
 - [prefix-tree](https://github.com/skyepodium/python-java-js-for-algorithm/blob/master/examples/leetcode/trie/implement-trie-prefix-tree.md)
-    - [implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
+    - [leetcode - implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
 # 📕 팁
 ## 1. 내장함수
