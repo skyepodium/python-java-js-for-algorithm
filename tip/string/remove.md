@@ -29,7 +29,7 @@ class Main {
 # 3. JavaScript
 참고로 `replaceAll`은 node.js 환경에서 제대로 작동하지 않는다.
 
-`replace`를 사용한다.
+`replace`과 `/g`글로벌 옵션을 사용한다.
 ```js
 let s = "Hello World!!! 2021~~ 찡긋"
 
