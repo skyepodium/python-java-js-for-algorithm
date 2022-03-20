@@ -107,6 +107,8 @@
 
 [문자열 합성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/concat.md)
 
+[정규식 - 와일드 카드](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/whildcard.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 
