@@ -91,7 +91,7 @@
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
 
 ## 2. 문자열
-[특정 문자열 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/regex.md)         
+[특정 문자열 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/remove.md)         
 
 [문자열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/reverse.md)     
 
@@ -138,3 +138,6 @@
 [defaultdict](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/defaultdict.md)
 
 [Counter](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/counter.md)
+
+## 7. 입출력
+[파이썬 리스트 출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/io/input-output.md)
