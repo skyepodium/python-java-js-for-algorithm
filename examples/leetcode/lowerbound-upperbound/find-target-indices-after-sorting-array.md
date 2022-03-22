@@ -12,7 +12,7 @@ class Solution:
         # 1. sort
         nums.sort()
         n = len(nums)
-        res = []
+        res = [x for x in range(n)]
 
         # 2. lower_bound
         def lower_bound(t):
@@ -38,10 +38,8 @@ class Solution:
 
         # 4. check
         l, r = lower_bound(target), upper_bound(target) - 1
-        if l == r:
-            res = [l]
-        elif l < r:
-            res = [x for x in range(l, r + 1)]
+        if l <= r:
+            res = res[l:r+1]
         else:
             res = []
 
@@ -50,9 +48,86 @@ class Solution:
 
 ### 2) java
 ```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
+class Solution {
+    public List<Integer> targetIndices(int[] nums, int target) {
+        // 1. init
+        int n = nums.length;
+        List<Integer> res = new ArrayList<>();
+        nums = Arrays.stream(nums).boxed().sorted().mapToInt(i -> i).toArray();
+
+        // 2, lowerBound, upperBound
+        int l = lowerBound(0, n, nums, target);
+        int r = upperBound(0, n, nums, target);
+
+        if(l <= r) for(int i=l; i<r; i++) res.add(i);
+
+        return res;
+    }
+
+    public int lowerBound(int start, int end, int[] nums, int target) {
+        while(start < end) {
+            int mid = start + (end - start) / 2;
+            if(nums[mid] < target) start = mid + 1;
+            else end = mid;
+        }
+        return end;
+    }
+
+    public int upperBound(int start, int end, int[] nums, int target) {
+        while(start < end) {
+            int mid = start + (end - start) / 2;
+            if(nums[mid] <= target) start = mid + 1;
+            else end = mid;
+        }
+        return end;
+    }
+}
 ```
 
 ### 3) JavaScript
 ```js
+const targetIndices = function(nums, target) {
+    // 1. init
+    nums.sort((a, b) => a - b)
+    const n = nums.length
+    const base = Array.from(Array(n).keys())
+    let res = []
+
+    // 2. lowerBound
+    const lowerBound = (target) => {
+        let l = 0
+        let r = n
+
+        while(l<r) {
+            const mid = l + Math.floor((r-l) / 2)
+            if(nums[mid] < target) l = mid + 1
+            else r = mid
+        }
+        return r
+    }
+
+    // 3. upperbound
+    const upperBound = (target) => {
+        let l = 0
+        let r = n
+
+        while(l<r) {
+            const mid = l + Math.floor((r-l) / 2)
+            if(nums[mid] <= target) l = mid + 1
+            else r = mid
+        }
+        return r
+    }
+
+    const l = lowerBound(target)
+    const r = upperBound(target)
+    if(l <= r) res = base.slice(l, r)
+
+    return res
+};
 ```
