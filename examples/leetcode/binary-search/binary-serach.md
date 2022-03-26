@@ -186,3 +186,45 @@ class Solution {
     }
 }
 ```
+
+### 5) C++
+### loop
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int s = 0;
+        int e = (int)nums.size() - 1;
+        
+        while(s <= e) {
+            int mid = s + (e-s) / 2;
+            if(nums[mid] < target) s = mid + 1;
+            else if(nums[mid] == target) return mid;
+            else e = mid - 1;
+        }
+        
+        return -1;
+    }
+};
+```
+
+### recursive
+```cpp
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        
+        return binarySearch(nums, target, 0, (int)nums.size() - 1);
+    }
+    
+    int binarySearch(vector<int>& nums, int target, int s, int e) {
+        if(s > e) return -1;
+        
+        int mid = s + (e-s) / 2;
+        
+        if(nums[mid] < target) return binarySearch(nums, target, mid + 1, e);
+        else if(nums[mid] == target) return mid;
+        else return binarySearch(nums, target, s, mid-1);
+    }
+};
+```
