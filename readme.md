@@ -56,7 +56,7 @@
     -   [leetcode: binary-search](https://leetcode.com/problems/binary-search/)
 
 ### 2) lowerbound, upperbound
--   [lowerbound, upperbound](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/binary-search.md)
+-   [lowerbound, upperbound](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/binary-search/lowerbound-upperbound.md)
     -   [백준 10816: 숫자 카드 2](https://www.acmicpc.net/problem/10816)
     -   [leetcode - https://leetcode.com/problems/find-target-indices-after-sorting-array/](https://leetcode.com/problems/find-target-indices-after-sorting-array/)
 
