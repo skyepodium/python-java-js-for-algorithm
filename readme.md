@@ -90,6 +90,8 @@
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
 
+[trim - 앞뒤 공백 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/trim.md)
+
 ## 2. 문자열
 [특정 문자열 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/remove.md)         
 
