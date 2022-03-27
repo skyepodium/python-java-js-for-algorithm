@@ -113,6 +113,8 @@
 
 [아스키 코드 값 구하기, 아스키코드에서 문자 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/ascii.md)
 
+[정규표현식으로 특정 문자열 모두 검색](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/regex-search.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 
