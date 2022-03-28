@@ -34,3 +34,19 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const sortByBits = (arr) => {
+    const getBitCount = (val) => {
+        let cnt = 0
+        while(val > 0) {
+            if(val % 2 === 1) cnt++
+            val = ~~(val / 2)
+        }
+        return cnt
+    }
+
+    return arr.sort((a, b) => getBitCount(a) === getBitCount(b) ? a - b : getBitCount(a) - getBitCount(b))
+};
+```
