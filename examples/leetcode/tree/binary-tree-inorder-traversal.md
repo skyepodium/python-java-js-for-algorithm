@@ -55,3 +55,22 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const inorderTraversal = (root) => {
+    const res = []
+
+    const search = (node) => {
+        if(!node) return
+
+        search(node.left)
+        res.push(node.val)
+        search(node.right)
+    }
+
+    search(root)
+
+    return res
+};
+```
