@@ -86,6 +86,11 @@
 - [prefix-tree](https://github.com/skyepodium/python-java-js-for-algorithm/blob/master/examples/leetcode/trie/implement-trie-prefix-tree.md)
     - [leetcode - implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
+
+## 3. 큐, 데큐
+- [queue-dequeue](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/dequeue/dequeue.md)
+
+
 # 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
