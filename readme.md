@@ -87,7 +87,7 @@
     - [leetcode - implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/)
 
 
-## 3. 큐, 데큐
+## 3. 큐, 덱
 - [queue-dequeue](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/dequeue/dequeue.md)
 
 
