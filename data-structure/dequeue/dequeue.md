@@ -1,9 +1,9 @@
 # 덱
 
 # 1. 개요
-queue, deueue 모두 dequeue로 만듭니다. 큐의 경우 가장 뒤에 삽입 하는 연산을 위해 더블 링크드 리스트로 구현하는 것이 효율적이고
+queue, deueue 모두 dequeue로 만듭니다. 큐의 경우 가장 뒤에 삽입 하는 연산을 위해 더블 링크드 리스트로 구현하는 것이 효율적입니다.
 
-더블 링크드 리스트로 구현하면 결국 덱이 됩니다. 
+더블 링크드 리스트로 구현하면 결국 deque를 위한 삭제, 삽입 연산까지 구현하면 편합니다.
 
 # 2. 코드
 ### 1) Python
@@ -89,3 +89,209 @@ class Dequeue:
     def last(self):
         return self.__tail.val
 ```        
+
+### 2) Java
+```java
+class Dequeue {
+    private Node head;
+    private Node tail;
+    private int cnt;
+
+    public Dequeue() {
+        this.head = null;
+        this.tail = null;
+        this.cnt = 0;
+    }
+
+    public boolean isEmpty() {
+        return this.cnt == 0;
+    }
+
+    public int size() {
+        return this.cnt;
+    }
+
+    public void increase() {
+        this.cnt++;
+    }
+
+    public void decrease() {
+        if(this.cnt > 0) this.cnt--;
+    }
+
+    public void addFirst(int val) {
+        Node node = new Node(val);
+
+        this.head = node;
+        this.tail = node;
+
+        this.increase();
+    }
+
+    public void addLast(int val) {
+        Node node = new Node(val);
+
+        this.tail.next = node;
+        node.prev = this.tail;
+        this.tail = this.tail.next;
+
+        this.increase();
+    }
+
+    public void push(int val) {
+        if(this.isEmpty()) {
+            this.addFirst(val);
+        }
+        else {
+            this.addLast(val);
+        }
+    }
+
+    public Integer popLeft() {
+        if(!this.isEmpty()) {
+            Node head = this.head;
+
+            if(this.head.next != null) {
+                this.head = this.head.next;
+            }
+
+            this.decrease();
+
+            return head.val;
+        }
+        else {
+            return null;
+        }
+    }
+
+    public Integer pop() {
+        if(!this.isEmpty()) {
+            Node tail = this.tail;
+
+            if(tail.prev != null) {
+                this.tail = this.tail.prev;
+            }
+
+            this.decrease();
+
+            return tail.val;
+        }
+        else {
+            return null;
+        }
+    }
+
+    public Integer front() {
+        return this.head.val;
+    }
+
+    public Integer last() {
+        return this.tail.val;
+    }
+}
+```
+
+### 3) JavaScript
+```js
+class Node {
+    constructor(val) {
+        this.val = val
+        this.next = null;
+        this.prev = null;
+    }
+}
+
+class Dequeue {
+    constructor() {
+        this.head = null
+        this.tail = null
+        this.cnt = 0
+    }
+
+    isEmpty() {
+        return this.cnt === 0
+    }
+
+    size() {
+        return this.cnt
+    }
+
+    increase() {
+        this.cnt++
+    }
+
+    decrease() {
+        if(this.cnt > 0) this.cnt--
+    }
+
+    addFirst(val) {
+        const node = new Node(val)
+
+        this.head = node
+        this.tail = node
+
+        this.increase()
+    }
+
+    addLast(val) {
+        const node = new Node(val)
+
+        this.tail.next = node
+        node.prev = this.tail
+        this.tail = this.tail.next
+
+        this.increase()
+    }
+
+    push(val) {
+        if(this.isEmpty()) {
+            this.addFirst(val)
+        }
+        else {
+            this.addLast(val)
+        }
+    }
+
+    popLeft() {
+        if(!this.isEmpty()) {
+            const head = this.head
+
+            if(this.head.next) {
+                this.head = this.head.next
+            }
+
+            this.decrease()
+
+            return head.val
+        }
+        else {
+            return null
+        }
+    }
+
+    pop() {
+        if(!this.isEmpty()) {
+            const tail = this.tail
+
+            if(tail.prev) {
+                this.tail = this.tail.prev
+            }
+
+            this.decrease()
+
+            return tail.val
+        }
+        else {
+            return null
+        }
+    }
+
+    front() {
+        return this.head.val
+    }
+
+    last() {
+        return this.tail.val
+    }
+}
+```
