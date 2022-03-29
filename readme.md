@@ -88,7 +88,7 @@
 
 
 ## 3. 큐, 덱
-- [queue-dequeue](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/dequeue/dequeue.md)
+- [queue-deque](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/dequeue/deque.md)
 
 
 # 📕 팁

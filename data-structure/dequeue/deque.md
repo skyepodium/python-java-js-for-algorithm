@@ -1,7 +1,7 @@
 # 덱
 
 # 1. 개요
-queue, deueue 모두 dequeue로 만듭니다. 큐의 경우 가장 뒤에 삽입 하는 연산을 위해 더블 링크드 리스트로 구현하는 것이 효율적입니다.
+queue, deque 모두 deque 만듭니다. 큐의 경우 가장 뒤에 삽입 하는 연산을 위해 더블 링크드 리스트로 구현하는 것이 효율적입니다.
 
 더블 링크드 리스트로 구현하면 결국 deque를 위한 삭제, 삽입 연산까지 구현하면 편합니다.
 
@@ -15,7 +15,7 @@ class Node:
         self.prev = None
 
 
-class Dequeue:
+class Deque:
     def __init__(self):
         self.__head = None
         self.__tail = None
@@ -92,7 +92,7 @@ class Dequeue:
 
 ### 2) Java
 ```java
-class Dequeue {
+class Deque {
     private Node head;
     private Node tail;
     private int cnt;
