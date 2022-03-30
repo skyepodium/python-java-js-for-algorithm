@@ -102,6 +102,55 @@ class Solution {
 }
 ```
 
+### 3) JavaScript
+```js
+const searchMatrix = (matrix, target) => {
+    // 1. init
+    const n = matrix.length
+    const m = matrix[0].length
+
+    const lowerBound = () => {
+        let s = 0
+        let e = n
+
+        while(s < e) {
+            const mid = s + ~~((e-s)/2)
+            if(matrix[mid][0] < target) {
+                s = mid + 1
+            } else {
+                e = mid
+            }
+        }
+        return e
+    }
+
+    let lowerIdx = lowerBound()
+    if(lowerIdx < 0) lowerIdx = 0
+    if(lowerIdx >= n) lowerIdx = n-1
+    if(matrix[lowerIdx][0] > target && lowerIdx > 0) lowerIdx--
+
+    const binarySearch = (idx) => {
+        let s = 0
+        let e = m - 1
+
+        while(s <= e) {
+            const mid = s + ~~((e-s)/2)
+            const cur = matrix[idx][mid]
+            if(cur < target) {
+                s = mid + 1
+            }
+            else if(cur === target) return mid
+            else {
+                e = mid - 1
+            }
+        }
+        return -1
+    }
+
+    return binarySearch(lowerIdx) !== -1
+};
+```
+
 
 ## 2) 반복문
 ### 1) python
