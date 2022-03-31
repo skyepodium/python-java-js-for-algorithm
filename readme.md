@@ -75,6 +75,9 @@
     -   [백준 11758: CCW](https://www.acmicpc.net/problem/11758)
 
 # 6. 정렬
+|알고리즘|최선|평균|최악|stable 여부|비고|
+|-------|-------|-------|-------|-------|-------|
+|퀵소트|O(nlong)|O(nlong)|O(n^2)|X|추가 메모리 사용 없음|
 ### 1) [퀵소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/quick-sort.md)       
 
 
