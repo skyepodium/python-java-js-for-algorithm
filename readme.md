@@ -75,13 +75,17 @@
     -   [백준 11758: CCW](https://www.acmicpc.net/problem/11758)
 
 # 6. 정렬
-|알고리즘|최선|평균|최악|stable 여부|비고|
-|-------|-------|-------|-------|-------|-------|
-|퀵소트|O(nlong)|O(nlong)|O(n^2)|X|추가 메모리 사용 없음|
-|버블소트|O(n^2)|O(n^2)|O(n^2)|O|iteration 마다 가장 큰 원소가 제일 뒤로 이동|
+|알고리즘|최선|평균|최악|메모리|stable 여부|비고|
+|-------|-------|-------|-------|-------|-------|-------|
+|버블소트|O(n)|O(n^2)|O(n^2)|O(1)|O|iteration 마다 가장 큰 원소가 제일 뒤로 이동|
+|삽입정렬|O(n)|O(n^2)|O(n^2)|O(1)|O||
+|퀵소트|O(nlong)|O(nlong)|O(n^2)|O(1)|X|추가 메모리 사용 없음|
 
-### 1) [퀵소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/quick-sort.md)       
 
+### 1) [버블소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/bubble-sort.md)      
+
+### 2) [삽입정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/insertion-sort.md)      
+### 3) [퀵소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/quick-sort.md)  
 
 
 

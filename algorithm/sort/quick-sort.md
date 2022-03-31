@@ -2,7 +2,7 @@
 
 # 1. 내용
 ### 1) 시간복잡도
-최선 - O(nlogn)
+최선 - O(nlogn)   
 평균 - O(nlogn)    
 최악 - O(n^2)
 
@@ -35,59 +35,35 @@ def quick_sort(arr, s, e):
     # 4. 인덱스 교차후 재귀 호출합니다.
     quick_sort(arr, s, r)
     quick_sort(arr, l, e)
-
-
-arr = [5, 1, 6, 3, 4, 2, 7]
-
-arr = [1, 2, 3, 5, 5, 6, 7]
-
-arr = [9, 8, 7, 6, 5, 4, 3, 2, 1]
-
-quick_sort(arr, 0, len(arr) - 1)
-
-print(arr)
 ```
 
 ### 2) Java
 ```java
-import java.util.Arrays;
+public static void quickSort(int[] arr, int s, int e) {
+    if(s >= e) return;
 
-class Main {
-    public static void main(String[] args) {
-        int[] arr = {6, 5, 4, 3, 2, 1, 0};
+    int mid = s + (e - s) / 2;
+    int pivot = arr[mid];
+    int l = s;
+    int r = e;
 
-        quickSort(arr, 0, arr.length - 1);
+    while(l <= r) {
+        while(arr[l] < pivot) l++;
+        while(arr[r] > pivot) r--;
 
-        Arrays.stream(arr).forEach(System.out::println);
-    }
-
-    public static void quickSort(int[] arr, int s, int e) {
-        if(s >= e) return;
-
-        int mid = s + (e - s) / 2;
-        int pivot = arr[mid];
-        int l = s;
-        int r = e;
-
-        while(l <= r) {
-            while(arr[l] < pivot) l++;
-            while(arr[r] > pivot) r--;
-
-            if(l <= r) swap(arr, l, r);
+        if(l <= r) {
+            int temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;                
             l++;
             r--;
         }
-
-        quickSort(arr, s, r);
-        quickSort(arr, l, e);
     }
 
-    public static void swap(int[] arr, int l, int r) {
-        int temp = arr[l];
-        arr[l] = arr[r];
-        arr[r] = temp;
-    }
+    quickSort(arr, s, r);
+    quickSort(arr, l, e);
 }
+
 ```
 
 ### 3) JavaScript
@@ -118,10 +94,4 @@ const quickSort = (arr, s, e) => {
     quickSort(arr, s, r)
     quickSort(arr, l, e)
 }
-
-arr = [6, 5, 4, 3, 2, 1, 0]
-
-quickSort(arr, 0, arr.length - 1)
-
-arr.forEach(x => console.log(x))
 ```
