@@ -78,6 +78,8 @@
 |알고리즘|최선|평균|최악|stable 여부|비고|
 |-------|-------|-------|-------|-------|-------|
 |퀵소트|O(nlong)|O(nlong)|O(n^2)|X|추가 메모리 사용 없음|
+|버블소트|O(n^2)|O((n^2)|O(n^2)|O|가장 큰 원소가 제일 뒤로 이동|
+
 ### 1) [퀵소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/quick-sort.md)       
 
 
