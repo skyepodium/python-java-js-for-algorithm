@@ -74,6 +74,9 @@
 -   [CCW](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/geometry/ccw.md)
     -   [백준 11758: CCW](https://www.acmicpc.net/problem/11758)
 
+# 6. 정렬
+### 1) CCW
+-   [퀵소트](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/quick-sort.md)
 
 
 # 🎃 자료구조
