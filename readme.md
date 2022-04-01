@@ -109,6 +109,8 @@
 ## 3. 큐, 덱
 - [queue-deque](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/dequeue/deque.md)
 
+## 4. 스택
+- [stack](https://github.com/skyepodium/python-java-for-algorithm/blob/master/data-structure/stack/stack.md)
 
 # 📕 팁
 ## 1. 내장함수
