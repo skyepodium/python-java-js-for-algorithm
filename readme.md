@@ -11,7 +11,7 @@
 `python, Java, JS` 로 문제 풀면서 정리해봅시다.
 
 # 🧩 문제 풀이
-파이썬, 자바 2개의 언어로 풀었습니다.
+파이썬, 자바, 자바스크립트 3개의 언어로 풀었습니다.
 
 리트코드의 경우 [파이썬 알고리즘 인터뷰](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791189909178&orderClick=LEa&Kc=)에 소개된 문제 위주로 진행했습니다.
 
