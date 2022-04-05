@@ -149,6 +149,8 @@
 
 [전체 문자열이 정규표현식과 맞는지 검사](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/regex-match.md)
 
+[문자열 합성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/synthesis.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 
