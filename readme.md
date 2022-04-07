@@ -180,8 +180,11 @@
 
 [Counter](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/counter.md)
 
-## 7. 연산자
+## 7. 자바
+[배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
+
+## 8. 연산자
 [정수 나눗셈, 몫 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/operator/division.md)
 
-## 8. 입출력
+## 9. 입출력
 [입출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/io/input-output.md)

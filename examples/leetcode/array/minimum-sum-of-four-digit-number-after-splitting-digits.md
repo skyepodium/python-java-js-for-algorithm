@@ -21,11 +21,10 @@ class Solution:
 ```java
 class Solution {
     public int minimumSum(int num) {
-        Integer[] s = Arrays.stream(Integer.toString(num).split(""))
+        int[] s = Arrays.stream(Integer.toString(num).split(""))
                 .map(Integer::parseInt)
                 .sorted(Comparator.comparingInt(a -> a))
-                .collect(Collectors.toList())
-                .toArray(new Integer[4]);
+                .mapToInt(Integer::intValue).toArray();
 
         return (s[0] + s[1]) * 10 + s[2] + s[3];
     }
