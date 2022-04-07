@@ -28,3 +28,10 @@ const average = (salary) => {
     return (salary.reduce((prev, cur) => prev + cur) - Math.max(...salary) - Math.min(...salary)) / (salary.length - 2)
 };
 ```
+
+### 4) TypeScript
+```ts
+const average = (salary: number[]): number => {
+    return (salary.reduce((prev, cur) => prev + cur) - Math.max(...salary) - Math.min(...salary)) / (salary.length - 2)
+};
+```
