@@ -74,3 +74,14 @@ var isPalindrome = function(s) {
     return s === s.split("").reverse().join("")
 };
 ```
+
+### 4) Kotlin
+```kt
+class Solution {
+    fun isPalindrome(s: String): Boolean {
+        val t = s.toLowerCase().replace("[^a-zA-Z0-9]".toRegex(), "")
+        println(t)
+        return t == t.reversed();
+    }
+}
+```
