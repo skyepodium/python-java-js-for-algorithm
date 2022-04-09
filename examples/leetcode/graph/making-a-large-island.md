@@ -8,7 +8,7 @@
 O(n^4) 가 아닌 O(n^2) 안에 풀어야한다.
 
 # 2. 코드
-### 1) python
+### 1) Python
 ```python
 from collections import deque
 
@@ -71,7 +71,7 @@ class Solution:
         return res if res > 0 else n * n
 ```
 
-### 2) java
+### 2) Java
 ```java
 import java.util.HashMap;
 import java.util.HashSet;
@@ -168,4 +168,81 @@ class Info {
         this.y = y;
     }
 }
+```
+
+### 3) JavaScript
+```js
+const largestIsland = (grid) => {
+    // 1. init
+    const n = grid.length
+    const check = Array.from(Array(n), () => new Array(n).fill(-1))
+    const d = [[0, -1], [0, 1], [1, 0], [-1, 0]]
+
+    // 2. bfs
+    const bfs = (startX, startY, idx) => {
+        check[startX][startY] = idx
+        const q = []
+        q.push([startX, startY])
+        let cnt = 0
+
+        while(q.length > 0) {
+            const [x, y] = q.shift()
+            cnt++
+
+            for(const [dx, dy] of d) {
+                const nx = x + dx
+                const ny = y + dy
+
+                if(nx < 0 || nx >= n || ny < 0 || ny >= n) continue
+
+                if(check[nx][ny] === -1 && grid[nx][ny] === 1) {
+                    check[nx][ny] = idx
+                    q.push([nx, ny])
+                }
+            }
+        }
+        return cnt
+    }
+
+    // 3. loop
+    let idx = 0
+    const m = new Map()
+    for(let i=0; i<n; i++) {
+        for(let j=0; j<n; j++) {
+            if(grid[i][j] === 1 && check[i][j] === -1) {
+                const cnt = bfs(i, j, idx)
+                m.set(idx, cnt)
+                idx++
+            }
+        }
+    }
+    
+    // 4. loop
+    let res = 0
+    for(let i=0; i<n; i++) {
+        for(let j=0; j<n; j++) {
+            if(grid[i][j] === 0) {
+                let curCnt = 0
+                const seen = new Set()
+
+                for(const [dx, dy] of d) {
+                    const nx = i + dx
+                    const ny = j + dy
+
+                    if(nx < 0 || nx >= n || ny < 0 || ny >= n) continue
+
+                    if(check[nx][ny] > -1 && !seen.has(check[nx][ny])) {
+                        const nIdx = check[nx][ny]
+                        const nCnt = m.get(nIdx)
+                        curCnt += nCnt
+                        seen.add(nIdx)
+                    }
+                }
+                res = Math.max(res, curCnt + 1)
+            }
+        }
+    }
+
+    return res > 0 ? res : n * n
+};
 ```
