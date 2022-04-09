@@ -167,6 +167,8 @@
 [배열 0 ~ n-1 까지 초기화하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/fill.md)
 
 [배열에서 최소값, 최대값 찾기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/min-max.md)
+
+[배열의 합 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/sum.md)
 ## 4. 수학
 [3개의 숫자중에서 최대값 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/math/3max.md)
 
