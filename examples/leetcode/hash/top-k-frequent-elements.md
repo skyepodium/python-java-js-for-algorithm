@@ -6,64 +6,41 @@
 [문제 링크](https://leetcode.com/problems/top-k-frequent-elements/)
 
 # 2. 코드
-### 1) python
+### 1) Python
 ```python
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
-        # 1. init
-        res = []
-        cnt = 0
-
-        # 2. result
-        for x in sorted(Counter(words).items(), key=lambda x: -x[1]):
-            if cnt >= k: break
-            res.append(x[0])
-            cnt += 1
-
-        return res
+        return [a for a, b in sorted(Counter(words).items(), key=lambda x: -x[1])][:k]
 ```
 
-### 2) java
+### 2) Java
 ```java
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
-        // 1. init
-        int[] res = new int[k];
         Map<Integer, Integer> m = new HashMap<>();
-        List<Info> numList = new ArrayList<>();
-        int idx = 0;
 
-        // 2. count
-        Arrays.stream(nums).forEach(x -> {
-            if(m.containsKey(x)) m.put(x, m.get(x) + 1);
-            else m.put(x, 1);
-        });
+        Arrays.stream(nums).forEach(x -> m.put(x, m.getOrDefault(x, 0) + 1));
 
-        // 3. to list
-        m.keySet().stream().forEach(x -> {
-            numList.add(new Info(x, m.get(x)));
-        });
-
-        // 4. sort
-        numList.sort((a, b) -> b.cnt - a.cnt);
-
-        // 5. result
-        for(Info info: numList) {
-            if(idx >= k) break;
-            res[idx] = info.num;
-            idx++;
-        }
-
-        return res;
+        return Arrays.copyOfRange(m.entrySet().stream().sorted((a, b) -> b.getValue() - a.getValue())
+                .mapToInt(Map.Entry::getKey)
+                .toArray(), 0, k);
     }
 }
+```
 
-class Info {
-    int num;
-    int cnt;
-    public Info (int num, int cnt) {
-        this.num = num;
-        this.cnt = cnt;
-    }
-}
+### 3) JavaScript
+```js
+const topKFrequent = (nums, k) => {
+    const m = new Map()
+
+    nums.forEach(x => {
+        if(m.has(x)) m.set(x, m.get(x) + 1)
+        else m.set(x, 1)
+    })
+
+    return [...m.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .map(x => x[0])
+        .slice(0, k)
+};
 ```
