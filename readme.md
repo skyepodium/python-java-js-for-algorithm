@@ -29,7 +29,7 @@
 -   [플로이드](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/floyd.md)
     - [백준 11404 : 플로이드](https://www.acmicpc.net/problem/11404)    
 
--   [플로이드](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/bellman-ford.md)
+-   [벨만포드](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/graph/shortest-path/bellman-ford.md)
     - [백준 11657 : 타임머신](https://www.acmicpc.net/problem/11657)    
 
 
