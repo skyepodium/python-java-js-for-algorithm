@@ -179,18 +179,21 @@
 ## 5. 인접리스트
 [인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
 
-## 6. 파이썬
+## 6. 힙 - 우선순위 큐
+[인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/heap/priority.md)
+
+## 7. 파이썬
 [파이썬 리스트 출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/python-list-print.md)
 
 [defaultdict](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/defaultdict.md)
 
 [Counter](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/counter.md)
 
-## 7. 자바
+## 8. 자바
 [배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
 
-## 8. 연산자
+## 9. 연산자
 [정수 나눗셈, 몫 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/operator/division.md)
 
-## 9. 입출력
+## 10. 입출력
 [입출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/io/input-output.md)
