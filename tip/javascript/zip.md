@@ -2,7 +2,7 @@
 
 파이썬의 zip 함수가 필요한 경우가 있습니다. 이 경우 제너레이터를 통해 구현합니다. 
 
-### 1. python
+### 1. Python
 ```python
 a = [1, 2, 3, 4, 5, 6, 7]
 b = ['a', 'b', 'c', 'd', 'e']
@@ -18,8 +18,8 @@ for x, y in zip(a, b):
 """
 ```
 
-### 2. java
-```java
+### 2. JavaScript
+```js
 const a = [1, 2, 3, 4, 5]
 const b = ['a', 'b', 'c', 'd', 'e']
 
