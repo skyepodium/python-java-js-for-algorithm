@@ -194,6 +194,8 @@
 ## 8. 자바
 [배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
 
+[배열 -> 리스트, 리스트 -> 배열 변환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-list.md)
+
 ## 9. 연산자
 [정수 나눗셈, 몫 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/operator/division.md)
 
