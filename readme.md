@@ -155,6 +155,8 @@
 
 [문자열 합성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/synthesis.md)
 
+[문자열에서 중첩된 부분까지 정규표현식으로 찾기 - 전방탐색](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/lookahead.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 

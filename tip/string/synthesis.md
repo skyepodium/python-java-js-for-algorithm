@@ -14,7 +14,7 @@ print(s) # Hi My name is Lion, 10 years old
 ```
 
 # 2. Java
-string format 사용하는 경우는 잘 못봤다.
+string format은 정규표현식을 동적으로 만들때 유용합니다.
 
 ### 1) StringBuilder
 ```java
