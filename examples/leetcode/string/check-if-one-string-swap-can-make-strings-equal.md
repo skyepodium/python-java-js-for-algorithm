@@ -83,3 +83,33 @@ const areAlmostEqual = (s1, s2) => {
     return base.length === 2 && base[0][0] === base[1][1] && base[0][1] === base[1][0]
 };
 ```
+
+제너레이터 사용
+```js
+const areAlmostEqual = (s1, s2) => {
+    // 0. zip
+    function* zip(a, b) {
+        const n = Math.min(a.length, b.length)
+        for(let i=0; i<n; i++) yield [a[i], b[i]]
+    }
+
+    // 1. init
+    if(s1 === s2) return true
+
+    const base = []
+    let cnt = 0
+
+    // 2. loop
+    for(const [c1, c2] of zip(s1, s2)) {
+
+        if(c1 !== c2) {
+            cnt++
+            base.push([c1, c2])
+        }
+
+        if(cnt >= 3) return false
+    }
+
+    return base.length === 2 && base[0][0] === base[1][1] && base[0][1] === base[1][0]
+};
+```
