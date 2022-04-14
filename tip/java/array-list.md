@@ -24,7 +24,7 @@ class Main {
         a.add("b");
 
         String[] b = a.toArray(new String[0]);
-        Arrays.stream(b).forEach(System.out::println); // a, // b
+        Arrays.stream(b).forEach(System.out::println); // a, b
 
         a = Arrays.stream(b).collect(Collectors.toList());
 
