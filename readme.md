@@ -155,6 +155,8 @@
 
 [문자열 합성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/synthesis.md)
 
+[문자열에서 중첩된 부분까지 정규표현식으로 찾기 - 전방탐색](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/lookahead.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 
@@ -192,8 +194,13 @@
 ## 8. 자바
 [배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
 
-## 9. 연산자
+[배열 -> 리스트, 리스트 -> 배열 변환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-list.md)
+
+## 9. 자바스크립트
+[자바스크립트 zip - 제너레이터](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/javascript/zip.md)
+
+## 10. 연산자
 [정수 나눗셈, 몫 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/operator/division.md)
 
-## 10. 입출력
+## 11. 입출력
 [입출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/io/input-output.md)
