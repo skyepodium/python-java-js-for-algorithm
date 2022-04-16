@@ -6,13 +6,37 @@
 
 # 2. 코드
 ### 1) Python
+### flatmap - sum
 ```python
-
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        
+        return sum([[a, b] for a, b in zip(nums[:n], nums[n:])], [])
+```
+#### flatmap - 리스트 컴프리헨션
+```python
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        
+        return [y for x in [[a, b] for a, b in zip(nums[:n], nums[n:])] for y in x]
 ```
 
 ### 2) Java
 ```java
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        // 1. init
+        List<Integer> l = new ArrayList<>();
 
+        // 2. loop
+        for(int i=0; i<n; i++) {
+            l.add(nums[i]);
+            l.add(nums[i+n]);
+        }
+
+        return l.stream().mapToInt(x -> x).toArray();
+    }
+}
 ```
 
 ### 3) JavaScript
