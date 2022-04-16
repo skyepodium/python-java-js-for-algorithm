@@ -199,8 +199,12 @@
 ## 9. 자바스크립트
 [자바스크립트 zip - 제너레이터](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/javascript/zip.md)
 
-## 10. 연산자
+## 10. 함수형 프로그래밍
+[flatmap](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/functional/flatmap.md)
+
+
+## 11. 연산자
 [정수 나눗셈, 몫 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/operator/division.md)
 
-## 11. 입출력
+## 12. 입출력
 [입출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/io/input-output.md)
