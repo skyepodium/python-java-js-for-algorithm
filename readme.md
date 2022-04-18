@@ -175,6 +175,9 @@
 [배열에서 최소값, 최대값 찾기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/min-max.md)
 
 [배열의 합 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/sum.md)
+
+[forEach 인덱스 함께 사용하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/loop-with-index.md)
+
 ## 4. 수학
 [3개의 숫자중에서 최대값 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/math/3max.md)
 
