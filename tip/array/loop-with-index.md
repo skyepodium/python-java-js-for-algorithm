@@ -3,7 +3,7 @@
 python, js는 builtin으로 편하게 사용할 수 있지만, java는 조금 다릅니다.
 
 - python - enumerate
-- java - 1) 인덱스 스트림, 2. atomic
+- java - 1) 인덱스 스트림, 2) atomic
 - JavaScript - builtin 지원 사용
 
 # 1. Python
