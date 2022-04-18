@@ -17,6 +17,7 @@ for idx, val in enumerate(a):
 
 # 2. Java
 ### 1) 인덱스 스트림
+`IntStream`으로 인덱스를 만들고, 참조해서 사용합니다.
 ```java
 import java.util.stream.IntStream;
 
@@ -49,8 +50,6 @@ class Main {
     }
 }
 ```
-
-### 2) 
 
 # 3. JavaScript
 builtin 함수에서 index는 두번째 인자로 사용가능합니다.
