@@ -101,6 +101,9 @@
 
 ### 6) [계수정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/sort/counting-sort.md)
 
+# 7. 인코딩
+### 1) Base64
+-   [Base64](https://github.com/skyepodium/python-java-for-algorithm/blob/master/algorithm/encoding/Base64.md)
 
 
 # 🎃 자료구조
