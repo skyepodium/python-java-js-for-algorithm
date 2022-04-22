@@ -50,3 +50,32 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const singleNumber = (nums) => {
+    let res = nums[0]
+
+    for(let i=1; i<nums.length; i++) {
+        res ^= nums[i]
+    }
+
+    return res
+};
+```
+
+### 4) c++
+```cpp
+using namespace std;
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int res = nums[0];
+        
+        for(int i=1; i<nums.size(); i++) res ^= nums[i];
+        
+        return res;
+    }
+};
+```
