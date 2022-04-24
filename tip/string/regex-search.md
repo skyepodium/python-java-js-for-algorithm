@@ -41,6 +41,18 @@ class Main {
 ```
 
 # 3. JavaScript
+### 1) matchall, 구조분해
+```js
+const s = " abcd ef gh i jklm "
+
+const re = /[a-z]+/g
+
+const res = [...s.matchAll(new RegExp(re))].map(x => x[0])
+
+console.log('res', res) // [ 'abcd', 'ef', 'gh', 'i', 'jklm' ]
+```
+
+### 2) exec
 정규표현식의 exec 메서드를 사용합니다.
 
 정규표현식 생성할때 글로벌 옵션 `g` 넣는것 잊지 맙시다.
