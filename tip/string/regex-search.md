@@ -69,5 +69,4 @@ while(match) {
 }
 
 console.log('res', res) // [ 'abcd', 'ef', 'gh', 'i', 'jklm' ]
-
 ```
