@@ -1,6 +1,8 @@
 # 배열 boxing, unboxing
 
 # 1. boxing
+boxing할때 `toArray(Integer[]::new)` 넣는 것 자꾸 잊어버린다. 주의하자
+
 ```java
 class Main {
     public static void main(String args[]) {
