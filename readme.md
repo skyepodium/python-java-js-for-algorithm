@@ -184,6 +184,8 @@
 ## 4. 수학
 [3개의 숫자중에서 최대값 구하기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/math/3max.md)
 
+[진법 변환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/math/base-conversion.md)
+
 ## 5. 인접리스트
 [인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
 
