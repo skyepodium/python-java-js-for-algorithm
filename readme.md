@@ -207,6 +207,8 @@
 ## 9. 자바스크립트
 [자바스크립트 zip - 제너레이터](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/javascript/zip.md)
 
+[정수형 범위 - 예시) 1) shift 연산 vs Math.pow, 2) not not vs Math.trunc](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/javascript/int-range.md)
+
 ## 10. 컬렉션
 [컬렉션 초기화](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/collections/init.md)
 
