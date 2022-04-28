@@ -194,7 +194,7 @@
 [인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/list/adjacent.md)
 
 ## 6. 힙 - 우선순위 큐
-[인접 리스트 만들기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/heap/priority.md)
+[우선순위 큐](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/heap/priority.md)
 
 ## 7. 파이썬
 [파이썬 리스트 출력](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/python-list-print.md)
