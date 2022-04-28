@@ -5,8 +5,13 @@
 - java - PriorityQueue
 - JavaScript- 빌트인 자료구조가 없다. 시간복잡도 이내면 정렬을 사용하고, 없으면 직접구현
 
+### 1) 일반
 코딩테스트에서 3가지 언어 모두 사용 가능한데 자바스크립트 힙이 필요하면 조금 의심해봐야한다.
 
+### 2) 다익스트라
+다익스트라 알고리즘의 경우 다음 문체처럼 우선순위큐 대신 일반 큐를 사용해도 시간안에 들어오도록 설계된다.
+[프로그래머스 - 경주로 건설
+](https://programmers.co.kr/learn/courses/30/lessons/67259)
 ### 1. python
 ```python
 from heapq import heappop, heappush, heapify

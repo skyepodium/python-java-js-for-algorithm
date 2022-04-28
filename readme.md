@@ -169,7 +169,7 @@
 
 [짧은 배열 반환](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/short-return.md)
 
-[2차원 배열 생성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/2d.md)
+[다차원 배열 생성](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/nd.md)
 
 [배열 자르기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/array-slice.md)
 
