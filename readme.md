@@ -131,7 +131,7 @@
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
 
-[정렬 - 문자열 배열](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/string-array-sort.md)
+[문자열 배열 정렬](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/string-array-sort.md)
 
 [trim - 앞뒤 공백 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/trim.md)
 
@@ -204,6 +204,9 @@
 [defaultdict](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/defaultdict.md)
 
 [Counter](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/counter.md)
+
+[split - maxsplit](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/split-maxsplit.md)
+
 
 ## 8. 자바
 [배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
