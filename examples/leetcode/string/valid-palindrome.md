@@ -63,12 +63,12 @@ class Solution {
 
 ### 3) JavaScript
 ```js
-var isPalindrome = function(s) {
+const isPalindrome = s => {
     // 1. 소문자 변경
     s = s.toLowerCase()
 
-    // 2. replaceAll 메서드, 정규식 치환
-    s = s.replaceAll(/[^a-z0-9]/g, "")
+    // 2. replace 메서드, 정규식 치환
+    s = s.replace(/[^a-z0-9]/g, "")
 
     // 3. 문자열 뒤집기
     return s === s.split("").reverse().join("")
@@ -84,4 +84,57 @@ class Solution {
         return t == t.reversed();
     }
 }
+```
+
+### 5) C++
+```cpp
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        // 1. init
+        s = toLower(s);
+        
+        // 2. two pointer
+        int n = (int)s.size();
+        int l = 0;
+        int r = n - 1;
+        
+        while(l < r) {
+            while(l < n && !isAlNum(s[l])) l++;
+            while(r >= 0 && !isAlNum(s[r])) r--;
+            
+            if(l >= r) break;
+            if(l >= s.size() || r < 0) break;
+
+            
+            if(s[l] != s[r]) return false;
+            l++;
+            r--;
+        }
+        
+        return true;
+    }
+    
+    string toLower(string s) {
+        string res = "";
+        
+        for(int i=0; i<s.size(); i++) {
+            char c = s[i];
+            if(c >= 'A' && c <= 'Z') c += 32;
+            res += c;
+        }
+        
+        return res;
+    }
+    
+    bool isAlNum(char c) {
+        return (48 <= c && c <= 57) || (65 <= c && c <= 90) || (97 <= c && c <= 122);
+    }
+};
 ```
