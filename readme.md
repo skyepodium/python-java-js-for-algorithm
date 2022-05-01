@@ -207,6 +207,8 @@
 
 [split - maxsplit](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/split-maxsplit.md)
 
+[max, sort key len](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/python/max-key.md)
+
 
 ## 8. 자바
 [배열 boxing, unboxing](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/java/array-boxing-unboxing.md)
