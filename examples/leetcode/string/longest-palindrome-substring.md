@@ -8,7 +8,7 @@
 [문제 링크](https://leetcode.com/problems/longest-palindromic-substring/)
 
 # 2. 코드
-### 1) python
+### 1) Python
 ```python
 class Solution:
     def longestPalindrome(self, s: str) -> str:
@@ -41,7 +41,7 @@ class Solution:
         return result
 ```
 
-### 2) java
+### 2) Java
 ```java
 class Solution {
     public String longestPalindrome(String s) {
@@ -90,7 +90,7 @@ class Solution {
 
 ### JavaScript
 ```js
-var longestPalindrome = function(s) {
+const longestPalindrome = (s) => {
     // 0. exception
     if(s.length < 2 || s === s.split("").reverse().join("")) return s
 
