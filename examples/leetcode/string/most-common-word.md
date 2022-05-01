@@ -11,74 +11,55 @@
 
 
 # 2. 코드
-### 1) python
+### 1) Python
 ```python
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
-        s = set(banned)
-        p = re.sub("[^a-zA-Z]", " ", paragraph).lower().split()
-        words = [w for w in p if w not in s]
 
-        return Counter(words).most_common(1)[0][0]
+        return Counter([w for w in re.sub("[^a-zA-Z]", " ", paragraph).lower().split() if w not in set(banned)]).most_common(1)[0][0]
 ```
 
-### 2) java
+### 2) Java
 - set - 금지된 단어 저장
 - map - 단어별 개수 저장
 ```java
+import java.util.*;
+import java.util.stream.Collectors;
+
 class Solution {
     public String mostCommonWord(String paragraph, String[] banned) {
-        // 1. 정규 표현식으로 영문자가 아닌 문자는 공백1칸으로 변경
-        paragraph = paragraph.replaceAll("[^a-zA-Z]", " ");
+        // 1. init
+        Set<String> s = Arrays.stream(banned).collect(Collectors.toSet());
+        String[] p = paragraph.toLowerCase().replaceAll("[^a-z]", " ").split(" +");
+        Map<String, Integer> m = new HashMap<>();
 
-        // 2. 한칸 이상의 공백을 기준으로 문자열 분리
-        String[] p = paragraph.toLowerCase().split(" +");
-
-        // 3. 금지된 단어를 저장할 set
-        HashSet<String> s = new HashSet<String>();
-        for(String word: banned) {
-            s.add(word);
+        // 2. count
+        for(String a: p) {
+            if(s.contains(a)) continue;
+            m.put(a, m.getOrDefault(a, 0) + 1);
         }
 
-        // 4. 개수를 검사할 map
-        HashMap<String, Integer> map = new HashMap<String, Integer>();
-
-        String result = "";
-        int cnt = 0;
-
-        for(String word: p) {
-            // 금지된 단어 패스
-            if(s.contains(word)) continue;
-
-            // 없으면 개수 1체크
-            if(!map.containsKey(word)) {
-                map.put(word, 1);
-            }
-            // 있으면 개수 1 증가
-            else {
-                int cur_cnt = map.get(word);
-                map.put(word, cur_cnt + 1);
-            }
-
-            // 개수 갱신, 제일 많은 단어 갱신
-            if(map.get(word) > cnt) {
-                result = word;
-                cnt = map.get(word);
-            }
-        }
-
-        return result;
+        return m.entrySet().stream()
+                    .sorted((a, b) -> b.getValue() - a.getValue())
+                    .collect(Collectors.toList())
+                    .get(0)
+                    .getKey();
     }
 }
 ```
 
 ### 3) JavaScript
 ```js
-var mostCommonWord = function(paragraph, banned) {
+const mostCommonWord = (paragraph, banned) => {
     // 1. init
     const s = new Set(banned)
-    const p = paragraph.toLowerCase().replaceAll(/[^a-zA-Z ]/g, ' ').split(/[ ]+/)
+    const p = paragraph.toLowerCase()
+            .replace(/[^a-zA-Z]/g, ' ')
+            .split(/ +/)
+            .filter(x => x !== '')
     const m = new Map()
+
+    // 2. loop
     p.forEach(w => {
         if(!s.has(w)) {
             if(m.has(w)) m.set(w, m.get(w) + 1)
@@ -86,16 +67,6 @@ var mostCommonWord = function(paragraph, banned) {
         }
     })
 
-    // 2. loop
-    let cnt = -1
-    let res = ""
-    for(const [w, c] of m.entries()) {
-        if(c > cnt) {
-            cnt = c
-            res = w
-        }
-    }
-
-    return res
+    return [...m.entries()].sort((a, b) => b[1] - a[1])[0][0]
 };
 ```
