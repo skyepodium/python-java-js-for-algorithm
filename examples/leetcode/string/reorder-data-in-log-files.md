@@ -14,6 +14,20 @@
 
 # 2. 코드
 ### 1) python
+
+정렬 조건만으로 분리
+- comparator와 동적 조건을 사용할 수 있기 때문에 적용가능
+```python
+class Solution:
+    def reorderLogFiles(self, logs: List[str]) -> List[str]:
+
+        def get_key(s):
+            i, c = s.split(" ", maxsplit=1)
+            return (0, c, i) if c[0].isalpha() else (1, )
+
+        return sorted(logs, key=get_key)
+```
+
 ```python
 class Solution:
     def reorderLogFiles(self, logs: list[str]) -> list[str]:
@@ -38,80 +52,79 @@ class Solution:
 
 ### 2) java
 ```java
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
     public String[] reorderLogFiles(String[] logs) {
-
         // 1. init
         List<String> letters = new ArrayList<>();
         List<String> digits = new ArrayList<>();
 
-        // 2. 숫자 여부에 따라 로그 분리
-        Arrays.stream(logs).forEach(x -> {
-            if(isDigit(x.split(" ")[1])) digits.add(x);
-            else letters.add(x);
-        });
+        // 2. loop
+        for(String l: logs) {
+            String[] ls = splitByTwo(l);
 
-        // 3. letters 정렬 1) 로그 기준, 2) identifier 기준
+            if(isNumber(ls[1].charAt(0))) digits.add(l);
+            else letters.add(l);
+        }
+
+        // 3. sort
         letters.sort((a, b) -> {
-            String[] first = a.split(" ", 2);
-            String[] second = b.split(" ", 2);
+            String[] ar = splitByTwo(a);
+            String[] br = splitByTwo(b);
 
-            if (first[1].equals(second[1])) {
-                return first[0].compareTo(second[0]);
-            } else {
-                return first[1].compareTo(second[1]);
-            }
+            return ar[1].equals(br[1]) ? ar[0].compareTo(br[0]) : ar[1].compareTo(br[1]);
         });
 
-        // 4. 리스트 array로 변경
+        // 4. addAll
         letters.addAll(digits);
-        String[] res = new String[letters.size()];
-        return letters.toArray(res);
+
+        return letters.toArray(new String[0]);
     }
 
-    // 5. 숫자 여부 검사 - 1) 0으로 시작 가능, 2) 길이 제한 없음
-    public Boolean isDigit(String s) {
-        int size = s.length();
-        for(int i=0; i<size; i++) {
-            if(!Character.isDigit(s.charAt(i))) return false;
-        }
-        return true;
+    public String[] splitByTwo(String s) {
+        return s.split(" ", 2);
+    }
+
+    public boolean isNumber(char c) {
+        return (int)c >= (int)'0' && (int)c <= (int)'9';
     }
 }
 ```
 
 ### 3) JavaScript
 ```js
-var reorderLogFiles = function(logs) {
-    // 1. init
-    const letter = []
-    const digit = []
+const reorderLogFiles = (logs) => {
+    // 1. splitByTwo
+    const splitByTwo = (s) => {
+        const idx = s.indexOf(" ")
+        return [s.slice(0, idx), s.slice(idx+1)]
+    }
 
-    // 2. loop
-    logs.forEach(log => {
-        if(/[0-9]/.test(log.split(" ")[1])) {
-            digit.push(log)
-        }
-        else {
-            letter.push(log)
-        }
+    // 2. isNumber
+    const isNumber = (c) => {
+        return /\d/.test(c)
+    }
+
+    // 3. init
+    const letters = [], digits = []
+
+    // 4. sort
+    logs.forEach(s => {
+        const [, contents] = splitByTwo(s)
+
+        if(isNumber(contents[0])) digits.push(s)
+        else letters.push(s)
     })
 
-    // 3. sort
-    letter.sort((a, b) => {
-        const as = a.split(" ")
-        const bs = b.split(" ")
+    letters.sort((a, b) => {
+        const [ai, ac] = splitByTwo(a)
+        const [bi, bc] = splitByTwo(b)
 
-        const ai = as[0]
-        const bi = bs[0]
-
-        const al = as.slice(1).join(" ")
-        const bl = bs.slice(1).join(" ")
-
-        // 문자열 정렬할때 localeCompare을 사용한다.
-        return al === bl ? ai.localeCompare(bi) : al.localeCompare(bl)
+        return ac === bc ? ai.localeCompare(bi) : ac.localeCompare(bc)
     })
 
-    return letter.concat(digit)
+    return letters.concat(digits)
 };
 ```
