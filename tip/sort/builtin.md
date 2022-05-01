@@ -149,6 +149,7 @@ class Info {
 ```
 
 ### 3) javascript
+문자열 정렬은 `localeCompare`을 사용합니다.
 ```js
 const l = []
 

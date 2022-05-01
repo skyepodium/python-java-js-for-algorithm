@@ -131,6 +131,8 @@
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
 
+[정렬 - 문자열 배열](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/string-array-sort.md)
+
 [trim - 앞뒤 공백 제거](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/trim.md)
 
 
