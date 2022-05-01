@@ -24,43 +24,27 @@ class Solution:
         return d.values()
 ```
 
-### 2) java
+### 2) Java
 ```java
+import java.util.*;
+
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        // 1. init
+        Map<String, List<String>> m = new HashMap<>();
 
-        // 1. 결과를 저장할 ArrayList
-        List<List<String>> result = new ArrayList<>();
+        // 2. loop
+        for(String s: strs) {
+            char[] c = s.toCharArray();
+            Arrays.sort(c);
+            String key = new String(c);
 
-        // 2. 인덱스를 저장할 map
-        HashMap<String, Integer> m = new HashMap<>();
-        int idx = 0;
-
-        for(String word: strs) {
-            // 3. 정렬
-            char[] charArray = word.toCharArray();
-            Arrays.sort(charArray);
-            String sortedString = new String(charArray);
-
-            int cur_idx = 0;
-            // 4. map에 정렬된 값이 있으면 ArrayList의 해당 인덱스에 추가
-            if(m.containsKey(sortedString)) {
-                cur_idx = m.get(sortedString);
-                List<String> cur = result.get(cur_idx);
-                cur.add(word);
-                result.set(cur_idx, cur);
-             }
-            // 5. map에 정렬된 값이 없으면, 새로운 ArrayList 추가
-            else {
-                cur_idx = idx;
-                m.put(sortedString, cur_idx);
-                idx++;
-                List<String> cur = new ArrayList<>();
-                cur.add(word);
-                result.add(cur);
-            }
+            List<String> t = m.getOrDefault(key, new ArrayList<>());
+            t.add(s);
+            m.put(key, t);
         }
-        return result;
+
+        return new ArrayList<>(m.values());
     }
 }
 ```
