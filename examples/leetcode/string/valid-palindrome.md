@@ -75,7 +75,16 @@ const isPalindrome = s => {
 };
 ```
 
-### 4) Kotlin
+### 4) TypeScript
+```ts
+const isPalindrome = (s: string): boolean => {
+    s = s.toLowerCase().replace(/[^a-z\d]/g, '')
+
+    return s === s.split("").reverse().join("")
+};
+```
+
+### 5) Kotlin
 ```kt
 class Solution {
     fun isPalindrome(s: String): Boolean {
@@ -86,7 +95,7 @@ class Solution {
 }
 ```
 
-### 5) C++
+### 6) C++
 ```cpp
 #include <iostream>
 #include <string>
