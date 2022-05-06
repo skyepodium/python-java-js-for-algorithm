@@ -168,6 +168,8 @@
 
 [숫자, 알파벳 여부 판별](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/check-number-alpha.md)
 
+[연속적인 중복 제거 - stack](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/string/remove-duplicate.md)
+
 ## 3. 배열
 [배열 뒤집기](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/array/reverse.md)     
 

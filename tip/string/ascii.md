@@ -1,7 +1,7 @@
 # 아스키 코드 값 구하기, 아스키코드에서 문자 구하기
 
 # 1. Python
-```py
+```python
 num = ord('a')
 
 print('num', num) # num 97
