@@ -57,10 +57,10 @@ class Solution {
 const removeDuplicates = (s) => {
     // 1. init
     const st = []
-    
+
     // 2. loop
     s.split("").forEach(c => {
-        if(st && st[st.length - 1] === c) while(st && st[st.length - 1] === c) st.pop()
+        if(st.length > 0 && st[st.length - 1] === c) while(st.length > 0 && st[st.length - 1] === c) st.pop()
         else st.push(c)
     })
 
@@ -76,7 +76,7 @@ const removeDuplicates = (s: string): string => {
 
     // 2. loop
     s.split("").forEach(c => {
-        if(st && st[st.length - 1] === c) while(st && st[st.length - 1] === c) st.pop()
+        if(st.length > 0 && st[st.length - 1] === c) while(st.length > 0 && st[st.length - 1] === c) st.pop()
         else st.push(c)
     })
 
