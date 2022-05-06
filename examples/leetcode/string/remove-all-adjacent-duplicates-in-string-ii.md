@@ -4,6 +4,12 @@
 
 [문제 링크](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)
 
+# 참고
+문자열에서 중복을 제거할때 스택의 특성을 이용할 수 있음을 잊지말자
+
+스택은 top의 자료를 O(1)만에 확인할 수 있다
+
+이 특성을 통해 연쇄적인 중복 제거가 가능합니다.
 
 # 2. 코드
 ### 1) Python
