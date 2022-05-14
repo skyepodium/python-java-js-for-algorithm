@@ -126,3 +126,85 @@ class Node {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const networkDelayTime = (times, n, k) => {
+    // 1. init
+    const maxVal = 10001
+    let res = 0
+    const d = Array.from(new Array(n + 1).fill(maxVal))
+    const v = Array.from(Array(n + 1), () => [])
+
+    // 2. make graph
+    times.forEach(([s, e, c]) => v[s].push([c, e]))
+
+    // 3. dijkstra
+    const dijkstra = (startNode) => {
+        const q = []
+        d[startNode] = 0
+        q.push([startNode, d[startNode]])
+
+        while(q.length > 0) {
+            const [node, cost] = q.shift()
+
+            if(d[node] < cost) continue
+
+            for(const [nCost, nNode] of v[node]) {
+                if(d[nNode] > d[node] + nCost) {
+                    d[nNode] = d[node] + nCost
+                    q.push([nNode, d[nNode]])
+                }
+            }
+        }
+    }
+
+    dijkstra(k)
+
+    // 4. check
+    res = Math.max(...d.slice(1, d.length))
+
+    return res === maxVal ? - 1 : res
+};
+```
+
+### 4) TypeScript
+```ts
+const networkDelayTime = (times: number[][], n: number, k: number): number => {
+    // 1. init
+    const maxVal:number = 10001
+    let res:number = 0
+    const d:number[] = Array.from(new Array(n + 1).fill(maxVal))
+    const v:[number, number][][] = Array.from(Array(n + 1), () => [])
+
+    // 2. make graph
+    times.forEach(([s, e, c]) => v[s].push([c, e]))
+
+    // 3. dijkstra
+    const dijkstra = (startNode) => {
+        const q:[number, number][] = []
+        d[startNode] = 0
+        q.push([startNode, d[startNode]])
+
+        while(q.length > 0) {
+            const [node, cost] = q.shift()
+
+            if(d[node] < cost) continue
+
+            for(const [nCost, nNode] of v[node]) {
+                if(d[nNode] > d[node] + nCost) {
+                    d[nNode] = d[node] + nCost
+                    q.push([nNode, d[nNode]])
+                }
+            }
+        }
+    }
+
+    dijkstra(k)
+
+    // 4. check
+    res = Math.max(...d.slice(1, d.length))
+
+    return res === maxVal ? - 1 : res
+};
+```
