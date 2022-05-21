@@ -30,3 +30,17 @@ class Solution {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const containsDuplicate = (nums) => {
+    return new Set(nums).size !== nums.length
+};
+```
+
+### 4) TypeScript
+```ts
+const containsDuplicate = (nums: number[]): boolean => {
+    return new Set(nums).size !== nums.length
+};
+```
