@@ -55,6 +55,30 @@ class Solution {
 }
 ```
 
+### 3) JavaScript
+```js
+const minCostClimbingStairs = (cost) => {
+    // 1. init
+    const n = cost.length
+    cost = cost.concat([0])
+    const MAX_VAL = 10000001
+    const d = Array.from(new Array(n+1)).fill(MAX_VAL)
+
+    // 2. bottom up
+    d[0] = cost[0]
+    d[1] = cost[1]
+
+    for(let i=0; i<n; i++) {
+        if(i + 1 <= n)
+            d[i+1] = Math.min(d[i+1], d[i] + cost[i+1])
+        if(i + 2 <= n)
+            d[i+2] = Math.min(d[i+2], d[i] + cost[i+2])
+    }
+
+    return d[n]
+};
+```
+
 ### 2. memoization
 ### 1) python
 ```python
@@ -119,4 +143,32 @@ class Solution {
         return d[i];
     }
 }
+```
+
+### 3) JavaScript
+```js
+const minCostClimbingStairs = (cost) => {
+    // 1. init
+    const n = cost.length
+    cost = cost.concat([0])
+    const MAX_VAL = 10000001
+    const d = Array.from(new Array(n+1)).fill(MAX_VAL)
+
+    // 2. top down
+    d[0] = cost[0]
+    d[1] = cost[1]
+
+    const go = (i) => {
+        if(d[i] < MAX_VAL) return d[i]
+
+        if(i - 1 >= 0)
+            d[i] = Math.min(d[i], go(i-1) + cost[i])
+        if(i - 2 >= 0)
+            d[i] = Math.min(d[i], go(i-2) + cost[i])
+
+        return d[i]
+    }
+
+    return go(n)
+};
 ```
