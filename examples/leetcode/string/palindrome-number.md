@@ -43,3 +43,25 @@ const isPalindrome = (x: number): boolean => {
     return s === s.split("").reverse().join("")
 };
 ```
+
+### 5) C++
+```cpp
+class Solution {
+   public:
+    bool isPalindrome(int x) {
+        string s = to_string(x);
+
+        int l = 0;
+        int r = s.size() - 1;
+
+        while (l < r) {
+            if (s[l] != s[r]) {
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
+    }
+};
+```

@@ -70,3 +70,64 @@ class Info {
     }
 }
 ```
+
+### 3) JavaScript
+```js
+const topKFrequent = (words, k) => {
+    // 1. init
+    const m = new Map();
+
+    // 2. count
+    words.forEach((word) => {
+        m.set(word, m.has(word) ? m.get(word) + 1 : 1);
+    })
+
+    // 3. sort
+    const sorted = [...m.entries()].sort((a, b) => {
+        if (a[1] === b[1]) {
+            return a[0] < b[0] ? -1 : 1;
+        }
+        return b[1] - a[1];
+    })
+
+    // 4. return
+    return sorted.slice(0, k).map((item) => item[0]);
+};
+```
+
+### 4) C++
+```js
+struct compare {
+    bool operator()(const pair<string, int> a, const pair<string, int> b) const {
+        if (a.second == b.second) {
+            return a.first < b.first;
+        }
+
+        return a.second > b.second;
+    }
+};
+
+class Solution {
+   public:
+    vector<string> topKFrequent(vector<string>& words, int k) {
+        // 1. init
+        vector<string> res;
+        unordered_map<string, int> m;
+
+        // 2. count
+        for (auto w : words) {
+            m[w]++;
+        }
+
+        // 3. sort
+        vector<pair<string, int>> v(m.begin(), m.end());
+        sort(v.begin(), v.end(), compare());
+
+        // 4. return
+        for (int i = 0; i < k; i++) {
+            res.push_back(v[i].first);
+        }
+        return res;
+    }
+};
+```
