@@ -44,3 +44,37 @@ const topKFrequent = (nums, k) => {
         .slice(0, k)
 };
 ```
+
+### 4) C++
+```cpp
+struct cmp {
+    bool operator()(const pair<int, int>& a, const pair<int, int>& b) {
+        return a.second > b.second;
+    }
+};
+
+class Solution {
+   public:
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        // 1. init
+        unordered_map<int, int> m;
+
+        // 2. count
+        for (auto num : nums) {
+            m[num]++;
+        }
+
+        // 3. sort
+        vector<pair<int, int>> v(m.begin(), m.end());
+        sort(v.begin(), v.end(), cmp());
+
+        // 4. return
+        vector<int> res;
+        for (int i = 0; i < k; i++) {
+            res.push_back(v[i].first);
+        }
+
+        return res;
+    }
+};
+```
