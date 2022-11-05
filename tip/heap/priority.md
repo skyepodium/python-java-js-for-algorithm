@@ -15,7 +15,7 @@
 [leetcode - path-with-minimum-effort](https://leetcode.com/problems/path-with-minimum-effort/)
 ### 1. python
 ```python
-from heapq import heappop, heappush, heapify
+from heapq import heappush
 
 q = [0, 1, 2, 3, 4, 5]
 
@@ -24,7 +24,7 @@ a = []
 for v in q:
    heappush(a, v)
 
-# 2. map heap
+# 2. max heap
 b = []
 for v in q:
     heappush(b, -v)
@@ -68,4 +68,37 @@ a.sort((a, b) => a-b)
 const b = []
 q.forEach(x => b.push(x))
 a.sort((a, b) => b-a)
+```
+
+### 4. C++
+priority_queue 사용
+
+priority_queue는 기본적으로 max heap이기 때문에 minheap이 필요한 경우 cmp 오퍼레이터터를 오버라이딩 합니다.
+
+우선순위 큐에 객체가 들어가는 경우에도 cmp 오퍼레이터를 오버라이딩해서 사용합니다.
+```c
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+struct minCmp {
+    bool operator()(int& l, int& r) {
+        return l > r;
+    }
+};
+
+int q[6] = {0, 1, 2, 3, 4, 5};
+
+int main() {
+    priority_queue<int, vector<int>, minCmp> minHeap;
+    for (auto i : q) {
+        minHeap.push(i);
+    }
+
+    priority_queue<int> maxHeap;
+    for (auto i : q) {
+        maxHeap.push(i);
+    }
+}
 ```
