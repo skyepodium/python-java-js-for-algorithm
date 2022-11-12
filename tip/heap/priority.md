@@ -125,7 +125,7 @@ a.sort((a, b) => b-a)
 - max heap(default)     
 priority_queue는 기본적으로 max heap이기 때문에 minheap이 필요한 경우 cmp 오퍼레이터터를 오버라이딩 합니다. 또는 `greater<int>`를 사용합니다.
 
-- 객체
+- 객체   
 우선순위 큐에 객체가 들어가는 경우에도 cmp 오퍼레이터를 오버라이딩해서 사용합니다.
 ```c
 #include <iostream>
