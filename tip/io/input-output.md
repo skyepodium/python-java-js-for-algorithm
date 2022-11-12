@@ -64,3 +64,22 @@ class Main {
     }
 }
 ```
+
+# 3. C++
+### cin, cout
+cin, cout을 그대로 사용하면 scanf, printf 보다 입출력 속도가 느리기 때문에 아래 설정을 추가합니다.
+
+scanf, printf 만큼 속도가 빨라지고, 더 편하다는 장점이 있습니다.
+
+하지만, 저 설정을 쓰면 printf, scanf로 입출력을 받으면 싱크가 안맞게 printf, scanf은 cin,cout과 함께 되어 사용할 수 없습니다.
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+}
+```
