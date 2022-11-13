@@ -27,7 +27,6 @@ class urlparser:
             else:
                 encoded_str = char.encode('utf-8').hex()
                 for i in range(0, len(encoded_str), 2):
-                    print(encoded_str[i:i + 2].upper())
                     encoded.append(f"%{encoded_str[i:i + 2].upper()}")
 
         return "".join(encoded)
@@ -61,15 +60,29 @@ class urlparser:
 
 url_parser = urlparser()
 
-original_url = "https://velog.io/@skyepodium/URL-인코딩디코딩-구현"
+original_url = "https://velog.io/@skyepodium/URL-인코딩-알아보기-feat.-파이썬-구현"
 print('원래 url:', original_url)
-# 원래 url: https://www.google.com?searchword=구글&location=한국
+# 원래 url: https://velog.io/@skyepodium/URL-인코딩-알아보기-feat.-파이썬-구현
 
-encoded_url = url_parser.encode(original_url, False)
-print('인코딩 url:', encoded_url)
-# 인코딩 url: https%3A%2F%2Fwww.google.com%3Fsearchword%3D%EA%B5%AC%EA%B8%80%26location%3D%ED%95%9C%EA%B5%AD
+print()
+
+# 1) 예약된 문자열 인코딩하는 경우
+encoded_url = url_parser.encode(original_url, True)
+print('1) 예약된 문자열 인코딩하는 경우: ', encoded_url)
+# 인코딩 url: https%3A%2F%2Fvelog.io%2F%40skyepodium%2FURL-%EC%9D%B8%EC%BD%94%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-feat.-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B5%AC%ED%98%84
 
 decoded_url = url_parser.decode(encoded_url)
 print('디코딩 url:', decoded_url)
-# 디코딩 url: https://www.google.com?searchword=구글&location=한국
+# 디코딩 url: https://velog.io/@skyepodium/URL-인코딩-알아보기-feat.-파이썬-구현
+
+print()
+
+# 2) 예약된 문자열은 인코딩 하지 않는 경우
+encoded_url = url_parser.encode(original_url, False)
+print('2) 예약된 문자열은 인코딩 하지 않는 경우: ', encoded_url)
+# 인코딩 url: https%3A%2F%2Fvelog.io%2F%40skyepodium%2FURL-%EC%9D%B8%EC%BD%94%EB%94%A9-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-feat.-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B5%AC%ED%98%84
+
+decoded_url = url_parser.decode(encoded_url)
+print('디코딩 url:', decoded_url)
+# 디코딩 url: https://velog.io/@skyepodium/URL-인코딩-알아보기-feat.-파이썬-구현
 ```
