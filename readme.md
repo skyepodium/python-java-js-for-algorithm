@@ -142,6 +142,26 @@
 
 인접셋 문제(https://atcoder.jp/contests/abc278/tasks/abc278_c)
 
+
+# 🌏 유명한 문제
+- N-Queen
+    - boj 
+        - https://www.acmicpc.net/problem/9663
+    - programmers 
+        - https://school.programmers.co.kr/learn/courses/30/lessons/12952
+    - leetcode
+        - https://leetcode.com/problems/n-queens/
+        - https://leetcode.com/problems/n-queens-ii/
+
+- triplet - O(N^2)
+    - leetcode
+        - https://leetcode.com/problems/3sum/
+        - https://leetcode.com/problems/increasing-triplet-subsequence/
+
+- LIS(가장 긴 증가하는 부분 수열) - O(NlogN)
+    - leetcode
+        - https://leetcode.com/problems/longest-increasing-subsequence/
+
 # 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
