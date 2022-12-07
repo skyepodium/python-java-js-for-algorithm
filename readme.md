@@ -162,6 +162,12 @@
     - leetcode
         - https://leetcode.com/problems/longest-increasing-subsequence/
 
+- LCS(가장 긴 공통 부분 수열) - O(nm)
+    - boj
+        - https://www.acmicpc.net/problem/9251
+    - leetcode 
+        - https://leetcode.com/problems/longest-common-subsequence
+
 # 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
