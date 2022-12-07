@@ -168,6 +168,11 @@
     - leetcode 
         - https://leetcode.com/problems/longest-common-subsequence
 
+- Knap sack(배낭 문제) - O(nm)
+    - boj
+        - https://www.acmicpc.net/problem/12865
+        - https://www.acmicpc.net/problem/1535
+
 # 📕 팁
 ## 1. 내장함수
 [정렬 - 내장함수](https://github.com/skyepodium/python-java-for-algorithm/blob/master/tip/sort/builtin.md)
